@@ -1,0 +1,2 @@
+hello this is a test file[file.txt]
+my name is hadis
