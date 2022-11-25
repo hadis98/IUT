@@ -1,0 +1,10 @@
+Australia;9
+Canada;6
+Central;3
+France;7
+Germany;8
+Northeast;2
+Northwest;1
+Southeast;5
+Southwest;4
+United Kingdom;10
