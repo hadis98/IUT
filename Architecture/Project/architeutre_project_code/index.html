@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon shortcut" href="images/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+    <title>Mano Simulator</title>
+    <script src="https://kit.fontawesome.com/d8428dc404.js" crossorigin="anonymous"></script>
+    <script src="app.js" defer></script>
+    <script src="draw_tables.js" defer></script>
+    <script src="instructions.js" defer></script>
+</head>
+
+<body>
+    <div class="box-shadow"></div>
+    <div class="program-info">
+        <h1 class="info-header">MANO SIMULATOR</h1>
+        <button id="helpBtn">Help</button>
+        <button id="resetBtn">Reset</button>
+    </div>
+    <div class="container">
+        <div class="editor">
+            <p id="editor-header">Code Editor</p>
+            <textarea name="editor" id="editor" rows="26" spellcheck="false"></textarea>
+            <div class="assembler">
+                <button class="button" id="assemblerBtn"><img src="images/processing.png" alt="">Assemble</button>
+            </div>
+        </div>
+
+        <div class="instruction-table__container">
+            <div class="instruction-table">
+                <p id="instruction-header">Instructions Detail</p>
+
+            </div>
+            <div class="controlUintButtons">
+                <button class="button" id="fetchBtn" disabled><img src="images/automation.png" alt="">Fetch</button>
+                <button class="button" id="decodeBtn" disabled><img src="images/decode.png" alt="">Decode</button>
+                <button class="button" id="executeBtn" disabled><img src="images/execution.png" alt="">Execute</button>
+            </div>
+            <div class="show-instruction">
+                <p>instruction <span id="current-instruction"></span> executed</p>
+                <p id="update_memory_alarm">content <span id="content_memory"></span> has been added to address <span id="current_address"></span> of memory</p>
+            </div>
+            <div class="instruction-info">
+                <div id="endProgram_notif" class="box-modal show-box">
+                    <div>
+                        <p>End of Program:)</p>
+                        <p>to test another example click on RESET button</p>
+                    </div>
+                    <button class="close-errorsBtn" id="endprogramBtn">OK</button>
+                </div>
+                <div class="box-modal errors">
+                    <p id="error-line">Editor is Empty</p>
+                    <button class="close-errorsBtn" id="emptyBtn">OK</button>
+                </div>
+                <div class="box-modal" id="errorLine_container">
+                    <p>an invalid instruction in address <span id="error_line"></span> of program </p>
+                    <button class="close-errorsBtn" id="errorLineBtn">OK</button>
+                </div>
+                <div class="box-modal" id="assembled_successfully_container">
+                    <p>program assembled successfully :)</p>
+                    <button class="close-errorsBtn" id="assembled_successfully_Btn">OK</button>
+                </div>
+            </div>
+            <p id="show-steps"></p>
+        </div>
+        <div class="memory-table">
+            <p class="text-center">Memory Table</p>
+        </div>
+    </div>
+    <div id="help" class="help">
+        <div class="help-header">
+            <img src="images/favicon.png" alt="">
+            <h1>MANO SIMULATOR</h1>
+        </div>
+        <h2>About</h2>
+        <p>this program is a simulator for basic MANO computer</p>
+        <p>it has a memory table that shows address and content of memory</p>
+        <p>it has a instruction table that shows detail of calculations</p>
+        <h2>How to use this program?</h2>
+        <p>
+            1.place your code in editor
+        </p>
+        <p>
+            2.click on Assemble button
+        </p>
+        <p>
+            3.for every instruction, click on fetch button then decode button then execute button
+        </p>
+        <h4 class="note">NOTE: you should keep the order of clicking on buttons otherwise it wont work properly</h4>
+        <h4 class="note">NOTE: to use program again, click on reset button</h4>
+        <h4 class="myself">created By HADIS GHAFOURI</h4>
+        <h3>view the prodess of coding in my github:)</h3>
+        <ul id="social-meida_container">
+            <li><a href="https://github.com/hadis98/Mano-simulator"><i class="fab fa-github"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/hadis-ghafouri-73a8281b3/"><i class="fa fa-linkedin social-media__link"></i></a></li>
+        </ul>
+        <button id="close-btn" class="btn">Close</button>
+    </div>
+    <!-- <footer>
+        <p class="text-center">Created By HADIS GHAFOURI</p>
+    </footer> -->
+</body>
+
+</html>

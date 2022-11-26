@@ -1,0 +1,430 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #e7ffff;
+    font-family: "Pangolin", cursive;
+}
+
+button {
+    font-family: "Pangolin", cursive;
+}
+
+.info-header {
+    text-align: center;
+    color: rgb(0, 61, 98);
+    margin-bottom: 0;
+    margin-top: 0.4rem;
+}
+
+#helpBtn {
+    position: absolute;
+    left: 2rem;
+    top: 0.4rem;
+    padding: 0.3rem 0.7rem;
+    border: 0;
+    cursor: pointer;
+    background-color: darkcyan;
+    color: white;
+    border-radius: 5px;
+}
+
+#resetBtn {
+    position: absolute;
+    left: 5rem;
+    top: 0.4rem;
+    padding: 0.3rem 0.7rem;
+    border: 0;
+    cursor: pointer;
+    background-color: darkcyan;
+    color: white;
+    border-radius: 5px;
+}
+
+#assemblerBtn {
+    width: 60%;
+    margin: 0 auto;
+    background-color: #01697e;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#assemblerBtn img {
+    width: 30%;
+}
+
+.program-info {
+    position: relative;
+}
+
+.container {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.editor {
+    width: 12%;
+}
+
+#editor-header {
+    color: #00324f;
+    font-size: 1.4rem;
+    margin: 0;
+    margin-bottom: 0.1rem;
+}
+
+.editor textarea {
+    width: 100%;
+    padding: 0.4rem;
+    font-size: 0.9rem;
+    color: #003233e9;
+    border: 2px solid #014d4e;
+    resize: none;
+}
+
+.memory-table {
+    width: 20%;
+    font-size: 0.8rem;
+}
+
+.memory-table p {
+    font-size: 1rem;
+    margin: 0 0 0.2rem 0;
+}
+
+.memory-table table {
+    table-layout: fixed;
+    width: 90%;
+    margin: 0 auto;
+    overflow-y: auto;
+    height: 80vh;
+    display: block;
+    color: rgb(176, 255, 242);
+    background-color: #077577;
+}
+
+.memory-table td {
+    width: 100%;
+}
+
+.memory-table table,
+.memory-table tr,
+.memory-table td {
+    border-collapse: collapse;
+    border: 1px solid #013c47;
+}
+
+.instruction-table__container {
+    width: 60%;
+    color: #1f3b4d;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-around;
+    font-size: 0.8rem;
+}
+
+.instruction-table table {
+    background-color: #b5fbfb;
+    height: 50vh;
+}
+
+.controlUintButtons {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.controlUintButtons button {
+    margin-right: 1.2rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.controlUintButtons a {
+    display: block;
+}
+
+.controlUintButtons img {
+    width: 30%;
+}
+
+.assembler {
+    text-align: center;
+}
+
+.button {
+    border: 0;
+    border-radius: 5px;
+    background-color: #29526b;
+    color: white;
+    padding: 0.2rem 0.4rem;
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+
+/* 
+.button:hover,
+#assemblerBtn:hover {
+    background-color: rgb(4, 153, 153);
+} */
+
+.button:active {
+    transform: scale(0.95);
+}
+
+#instruction-header {
+    margin: 0 0 0.2rem 0;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.instruction-table table {
+    width: 90%;
+    margin: 0 auto;
+    table-layout: fixed;
+    /* text-align: center; */
+}
+
+.instruction-table table .info-column {
+    width: 25%;
+}
+
+.instruction-table table,
+.instruction-table tr,
+.instruction-table td {
+    border-collapse: collapse;
+    border: 1px solid #1f3b4d;
+}
+
+.instruction-table tr,
+.instruction-table td,
+.memory-table tr,
+.memory-table td {
+    padding: 0.2rem;
+}
+
+.bold-text {
+    font-weight: 900;
+}
+
+textarea:focus {
+    outline: 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.second-column {
+    background-color: #d8feff;
+}
+
+
+/* footer p {
+    font-size: 0.6rem;
+    margin: 0;
+    color: darkblue;
+    position: absolute;
+    bottom: 0.5rem;
+    right: 50%;
+    font-weight: 900;
+} */
+
+.sticky-header {
+    top: 0;
+    position: sticky;
+    background-color: aquamarine;
+    color: black;
+}
+
+.show {
+    display: block !important;
+}
+
+.hide {
+    display: none !important;
+}
+
+.help {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    width: 17rem;
+    transform: translate(-25rem);
+    transition: transform 1s ease-in-out;
+    background-color: #333;
+    color: #fff;
+    padding-right: 1.2rem;
+    padding-left: 1.2rem;
+    font-size: 0.8rem;
+}
+
+.help.show {
+    transform: translateX(0);
+}
+
+.help-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.help-header h1 {
+    display: block;
+}
+
+.help-header img {
+    display: block;
+    width: 20%;
+}
+
+.help .note {
+    color: rgb(151, 245, 253);
+}
+
+.btn {
+    cursor: pointer;
+    border: 0;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    background-color: #000;
+    border-radius: 5px;
+    font-size: 0.7rem;
+}
+
+.btn:hover {
+    background-color: #222;
+}
+
+.btn:active,
+#helpBtn:active,
+#resetBtn:active {
+    transform: scale(0.9);
+}
+
+#helpBtn:hover,
+#resetBtn:hover {
+    background-color: #164f57;
+}
+
+.myself {
+    color: #45f0cb;
+}
+
+.box-modal {
+    display: none;
+    text-align: center;
+    width: 30%;
+    height: 20%;
+    background-color: rgb(11, 51, 51);
+    color: white;
+    z-index: 5;
+    position: absolute;
+    top: 30%;
+    left: 35%;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-shadow {
+    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 100vh;
+    width: 100vw;
+    z-index: 3;
+}
+
+.errors,
+#assembled_successfully_container {
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.errors p,
+#assembled_successfully_container,
+p #errorLine_container p {
+    margin: 0.2rem 0.1rem !important;
+}
+
+.close-errorsBtn {
+    width: 20%;
+    cursor: pointer;
+    border: 0;
+    padding: 0.5rem 1rem;
+    color: black;
+    background-color: #45f0cb;
+    border-radius: 5px;
+    font-size: 0.7rem;
+}
+
+#endProgram_notif,
+#errorLine_container {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.show-instruction {
+    background-color: rgb(163, 255, 240);
+    padding-left: 0.9rem;
+    padding-top: 0.9rem;
+    margin: 0 auto;
+    color: rgb(0, 54, 58);
+    font-weight: bold;
+    width: 45%;
+    height: 5rem;
+    /* text-align: right; */
+}
+
+.show-instruction p {
+    margin: 0.2rem;
+}
+
+#update_memory_alarm {
+    display: none;
+}
+
+.appear-content {
+    color: rgb(53, 255, 2);
+}
+
+#show-steps {
+    margin: 0;
+}
+
+#social-meida_container {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#social-meida_container a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+}
+
+#social-meida_container i:hover {
+    color: rgb(122, 245, 183);
+}
