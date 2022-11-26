@@ -1,0 +1,49 @@
+---- DATABASE DESIGN 1 @ IUT
+---- YOUR NAME:hadis ghafouri
+---- YOUR STUDENT NUMBER: 9825413
+
+
+A:
+
+ create view stotals1 as (
+  select  EXTRACT(year FROM orderdate)as year, EXTRACT(QUARTER FROM orderdate)as quarter,
+ EXTRACT(month FROM orderdate)as month,  EXTRACT(day FROM orderdate)as day,
+ sum(orderqty) over(partition by EXTRACT(day FROM orderdate)) as totqty ,sum(orderqty* unitprice) over (partition by EXTRACT(day FROM orderdate)) as totprice
+ from sales.salesorderheader join sales.salesorderdetail using(salesorderid)
+	 )	 
+	 
+
+ select * from stotals1
+ order by year,quarter,month,day
+ limit 5;
+
+
+B:
+
+select year y ,quarter q ,month m , day d ,sum(totqty) totq ,sum(totprice)totfee
+from stotals1
+group by 
+rollup(
+y,q,m,d
+)
+ order by y,q,m,d
+
+
+C:
+
+
+select year,quarter,sum(totprice)/sum(totqty) as sum_amount,
+rank() over(
+partition by quarter
+order by (sum(totprice)/sum(totqty)) desc
+) as m_rank
+from stotals1 t1
+ group by year,quarter
+order by year,quarter,m_rank 
+
+
+D:
+
+
+
+	 
