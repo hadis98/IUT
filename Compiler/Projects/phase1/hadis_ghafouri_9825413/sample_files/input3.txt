@@ -1,0 +1,7 @@
+int x=0; 2+4 4-5
+if (y>=x) { hello }
+'"' ''' '\' '\n' '\t' '\'' '\\'  '\"' '\?'
+'hadis'  '?'
+13hasd1234 if false False return program else Program 
+"test if \" is "; "hi "hadis" 
+if x==y {x=y || y!=x} test ( )

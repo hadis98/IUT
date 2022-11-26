@@ -1,0 +1,8 @@
+class Program {
+boolean is_greater_than_zero(int a) {
+return 0;
+}
+void main() {
+is_greater_than_zero(5);
+}
+}

@@ -1,0 +1,10 @@
+class Program{
+void main(){
+int k,d;
+k = 9;
+d=65;
+for i = 0, 5 {
+k = k + 1;
+}
+}
+}

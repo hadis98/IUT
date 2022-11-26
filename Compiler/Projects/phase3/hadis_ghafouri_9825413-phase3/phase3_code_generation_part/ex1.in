@@ -1,0 +1,39 @@
+class Program {
+boolean isFalse,isSomething;
+boolean isTrue;
+boolean checkExistance (int test){
+    int c;
+    c = test;
+    if (test == 2){
+        return true;
+    }
+    return false;
+}
+int add(int a, int b){
+    if( a&&b){
+        int _c10;
+    }else{
+        boolean c,d;
+    }
+isFalse= a||b + checkExistance(3);
+return a + b;
+}
+void main(){
+int a, b,c,sum;
+boolean is1,is2,is3;
+a = 3;
+b=12;
+sum =0;
+for c=(a - 2),(b*3 + 3 -add(3,4)){
+   sum += add(a,b);
+    if(sum >= 10){
+        is1 =true;
+        break;
+    }else{
+        is1 = false;
+        continue;
+    }
+}
+add(a);
+}
+}

@@ -1,0 +1,18 @@
+//int num3 = 2147483699923  2147483647 2147483646;
+int num3 = +2147483643 -214748364;
+int x-=2;
+int y+=4;
+y=!x;
+2-4 4+2 2*+-4
+if(x!=y)
+print("not equal");
+char h='a';
+const char str='hadis?';
+int 23numb = 0x123sdfsda
+x<2;
+0x334  0xa9fbBF
+'test   "hadis
+"is sd;lfsad;f?
+23434 25234345345342534534 -13423 +34534 -3324333339
+"hi hadis" test" " 
+

@@ -1,0 +1,7 @@
+class Program {
+int globalVar;
+void main(){
+    int a;
+    a = 0;
+ }
+}

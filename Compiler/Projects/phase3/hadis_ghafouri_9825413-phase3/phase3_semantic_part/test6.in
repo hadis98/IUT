@@ -1,0 +1,17 @@
+class Program {
+boolean is_greater_than_zero(int a,boolean b3) {
+int b,c;
+boolean isAnswer,t1,t2;
+t1 = false;
+t2 = true;
+b = b/2;
+//t1= t1>=t2;
+t2 = t1&&(b<=b*3);
+//t2 = b<t2;
+isAnswer = t1 == t2; 
+return isAnswer;
+}
+int main() {
+is_greater_than_zero(2,false,3);
+}
+}

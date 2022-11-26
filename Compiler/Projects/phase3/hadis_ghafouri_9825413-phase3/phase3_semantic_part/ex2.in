@@ -1,0 +1,13 @@
+class Program {
+int arr1[10],items[30];
+int add(int a){
+return a;
+}
+void main(){
+int a, b,c;
+items[2*5] = arr1[4];
+//a ='c';
+b=0x12 + 12;
+test_func(arr1[3],0,c,10*2/4);
+}
+}

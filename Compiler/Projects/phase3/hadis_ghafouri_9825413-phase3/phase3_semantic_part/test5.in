@@ -1,0 +1,7 @@
+class Program {
+int arr[5];
+void main() {
+arr[0] = 4;
+arr[4] = a[0] + 0x0A;
+}
+}

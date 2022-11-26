@@ -1,0 +1,13 @@
+class Program {
+int add(int a, int b){
+return a+b;
+}
+int test(int a){
+    return a;
+}
+void main(){
+int ans;
+ans = add(2,3);
+//test(2);
+}
+}

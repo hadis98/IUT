@@ -1,0 +1,8 @@
+class Program {
+void main() {
+int a, b, c;
+a = 0x0A + 5;
+b = 2;
+c = a + b;
+}
+}
