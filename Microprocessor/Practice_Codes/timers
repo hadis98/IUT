@@ -1,0 +1,32 @@
+//toggle all the bits of portb continuously with some delay
+// use TIMER0 ,normal mode , no prescaler options
+
+#include <avr/io.h>
+void t0Delay();
+
+int main(void)
+{
+
+    DDRB = 0xFF; // PORTB is output
+
+    while (1)
+    {
+        PORTB = 0x55;
+        t0Delay();
+        PORTB = 0xAA;
+        t0Delay();
+
+    }
+
+    return 0;
+}
+
+void t0Delay()
+{
+    TCNT0 = 0x20;             // load TCNT0
+    TCCR0 = 0x01;             // Timer0, normal mode,no prescalar
+    while ((TIFR & 0x1) == 0) // wait for TF0 to roll over
+        ;
+    TCCR0 = 0;
+    TIFR = 0x1; // clear TFO (TIMER OVERFLOW)
+}

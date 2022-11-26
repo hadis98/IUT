@@ -1,0 +1,17 @@
+;timer clock = 8MHz / 64 = 125kHz => timer period = 1/125 kHz = 8us
+;timer value = 1920us / 8us = 240
+
+
+;Timer2 delay
+DELAY:LDI   R20,-240        ;R20=0x10
+      OUT   TCNT2,R20       ;load Timer2
+      LDI   R20,0x04
+      OUT   TCCR2,R20       ;Timer2 , normal mode,int clk,prescaler 64
+AGAIN:IN    R20,TIFR        ;read TIFR
+      SBRS  R20,TOV2        ;if TOV2 is set skip next instructin
+      RJMP  AGAIN
+      LDI   R20,0x0
+      OUT   TCCR2,R20       ;stop Timer2
+      LDI   R20, 1<<TOV2
+      OUT   TIFR,R20        ;clear TOV2 flag
+      RET

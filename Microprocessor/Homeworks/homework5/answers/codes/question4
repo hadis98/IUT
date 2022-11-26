@@ -1,0 +1,27 @@
+#include <avr/io.h>
+#include <avr/interrupt.h>
+
+int main(void)
+{
+
+    DDRB |= 0x20; // DDRB.5=output
+    TCNT0 = -32;  // timer value for 4us
+    TCCR0 = 0x01; // normal mode ,int clk,no prescaler
+    TIMSK = (1 << TOIE0);
+    sei();
+
+    DDRC = 0;    // PORTC is input
+    DDRD = 0xFF; // PORTC is output
+
+    while (1)
+    {
+
+        PORTD = PINC;
+    }
+}
+
+ISR(TIMER0_OVF_vect)        //ISR for timer0 overflow
+{
+    TCNT0 = -32;
+    PORTB ^= 0x20; // toggle PORTB.5
+}

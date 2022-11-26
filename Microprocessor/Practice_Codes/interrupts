@@ -1,0 +1,77 @@
+// using timer0 generate a square wave on pin PORTB.5
+// while at the same time transfering from PORTC TO PORTD
+
+#include "avr/io.h"
+#include "avr/interrupt.h"
+
+int main(void)
+{
+    DDRB |= 0x20; // DDRB.5 = output
+    TCNT0 = -32;  // timer value for 4us
+    TCCR0 = 0x01; // normal mode,int clk,no prescaler
+
+    TIMSK = (1 << TOIEO) // enable timer0 overflow interrupt
+        sei();
+
+    DDRC = 0x00; // make portc input
+    DDRD = 0xFF; // make portd output
+
+    while (1) //wait here
+    {
+        PORTD = PINC;
+    }
+
+    return 0;
+}
+
+ISR(TIMER0_OVF_vect)   //ISR for timer0 overflow
+{
+    TCNT0 = -32;
+    PORTB ^= 0x20; // toggle portb.5
+}
+
+
+// using timer0 and timer1 interrupts ,generate sqare waves on pins PB1 and PB7
+// respectively while transferring data from portc to portd
+
+#include "avr/io.h"
+#include "avr/interrupt.h"
+
+int main(void)
+{
+    DDRB |= 0x82; // make DDRB.1 and  DDRB.7= output     (10000010)
+    DDRC = 0x00; // make portc input
+    DDRD = 0xFF; // make portd output
+    TCNT0 = -160;  
+    TCCR0 = 0x01; // normal mode,int clk,no prescaler
+
+    TCNT1H = (-640)>>8;     //the high byte
+    TCNT1L = (-640);     //the low byte
+    TCCR1A = 0x00;
+    TCCR1B = 0x01;
+    TIMSK = (1 << TOIEO) | (1<<TOIE1); // enable timer0 and timer1 overflow interrupt
+    sei();
+
+
+
+    while (1) //wait here
+    {
+        PORTD = PINC;
+    }
+
+    return 0;
+}
+
+ISR(TIMER0_OVF_vect)   //ISR for timer0 overflow
+{
+    TCNT0 = -160;     //TCNT0 = -160(reload for next round)
+    PORTB ^= 0x02; // toggle portb.1
+}
+
+ISR(TIMER1_OVF_vect)   //ISR for timer0 overflow
+{
+    TCNT1H = (-640)>>8;
+    TCNT1L = (-640);        //TCNT1 = -640 (reload for next round)
+
+    PORTB ^= 0x80; // toggle portb.7
+}

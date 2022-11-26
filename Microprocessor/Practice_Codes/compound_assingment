@@ -1,0 +1,15 @@
+#include <avr/io.h>
+int main(void)
+{
+    DDRB &= 0b11011111; // bit5 of  PORTB is input  =0b10000000
+    DDRC |= 0b10000000; // bit 7 of portC is output
+    while (1)
+    {
+        if (PINB & 0b00100000)   // check pin5(6nd pin) of PINB
+            PORTC |= 0b10000000; // set bit7 of portC to 1
+        else
+            PORTC &= 0b01111111; // clear bit7 of portC to 0
+    }
+
+    return 0;
+}

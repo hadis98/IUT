@@ -1,0 +1,26 @@
+#include <avr/io.h>
+int main(void)
+{
+
+    PORTB = 0x01; // activate pull-up of PB0
+    DDRC = 0xFF;  // PORTC is output
+    DDRD = 0xFF;  // PORTD is output
+
+    TCCR1A = 0x00; // output clock source
+    TCCR1B = 0x07; // output clock source
+
+    TCNT1H = 0x00; // set count to 0
+    TCNT1L = 0x00; // set count to 0
+
+    while (1)
+    {
+        do
+        {
+            PORTC = TCNT1L;
+            PORTD = TCNT1H;
+
+        } while ((TIFR & (0x1 << TOV1)) == 0); // wait for TOV1
+
+        TIFR = 0x1 << TOV1; // clear TOV1
+    }
+}

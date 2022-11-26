@@ -1,0 +1,52 @@
+// LEDs are connected to pins of PORTB
+// programm to show the count from 0 to FFH (0000 0000 to 1111 1111 in binary) on the LEDS
+
+#include <avr/io.h>
+int main(void)
+{
+    DDRB = 0xFF; // PORTB is output
+    while (1)
+    {
+        PORTB = PORTB + 1;
+    }
+
+    return 0;
+}
+
+// programm to get a byte of data from PORTB and then send it to PORTC
+#include <avr/io.h>
+int main(void)
+{
+    unsigned char temp;
+    DDRB = 0x00; // PORTB is input
+    DDRC = 0xFF  // PORTC is output
+        while (1)
+    {
+        temp = PINB;
+        PORTC = temp;
+    }
+
+    return 0;
+}
+
+// programm to get a byte of data from portC.
+//  if it is less than 100 send it to PORTB ; otherwise send it to PORTD
+#include <avr/io.h>
+int main(void)
+{
+    unsigned char temp;
+    DDRC = 0;    // PORTC is input
+    DDRB = 0xFF; // PORTB is output
+    DDRD = 0xFF; // PORTC is output
+    
+    while (1)
+    {
+        temp = PINC;
+        if (temp < 100)
+            PORTB = temp;
+        else
+            PORTD = temp;
+    }
+
+    return 0;
+}

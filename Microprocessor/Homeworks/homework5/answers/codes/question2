@@ -1,0 +1,19 @@
+;we should use prescaler = 256 since we cannot use a decimal point
+;to wait 250clocks we should load OCR2 with 250-1 = 249
+;  TIMER2 DELAY
+
+DELAY:LDI   R20,0
+      OUT   TCNT2,R20       ;TCNT2 =0
+      LDI   R20,249
+      OUT   OCR2,R20        ;OCR2 = 249
+      LDI   R20,OxOE
+      OUT   TCCR2,R20       ;Timer2 , CTC mode, prescaler = 256
+
+AGAIN:IN    R20,TIFR        ;read TIFR
+      SBRS  R20,OCF2        ;if OCF2 is set skip next inst.
+      RJMP  AGAIN
+      LDI   R20,0x0
+      OUT   TCCR2,R20       ;stop Timer2
+      LDI   R20,1<<OCF2
+      OUT   TIFR,R20        ;clear OCF2 flag
+      RET

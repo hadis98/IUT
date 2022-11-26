@@ -1,0 +1,47 @@
+// toggle all the bits of portB with a 100ms delay
+// assume that the system is ATmega32 with 8MHz
+#include <avr/io.h>
+
+void delay100ms(void)
+{
+    unsigned int i;
+    for (i = 0; i < 42150; i++)
+        ;
+}
+
+int main(void)
+{
+    DDRB = 0xFF; // PORTB is output
+    while (1)
+    {
+        PORTB = 0xAA;
+        delay100ms();
+        PORTB = 0x55;
+        delay100ms();
+    }
+
+    return 0;
+}
+
+// predefined functions
+// toggle all the pins of PORTC continuously with a 10ms delay
+#include <avr/io.h>
+#include <util/delay.h>
+
+int main(void)
+{
+
+    void delay_ms(int d)
+    {
+        _delay_ms(d);//delay in d microseconds
+    }
+
+    DDRB = 0xFF;    //PORTB is output
+    while (1)
+    {
+        PORTB = 0xFF;
+        delay_ms(10);
+        PORTB = 0x55;
+        delay_ms(10);
+    }
+}

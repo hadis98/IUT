@@ -1,0 +1,21 @@
+#include <avr/io.h>
+
+void delay100ms(void)
+{
+    unsigned int i;
+    for (i = 0; i < 42150; i++);
+}
+
+int main(void)
+{
+    DDRB = 0xFF; // PORTB is output
+    while (1)
+    {
+        PORTB = PORTB | 0b00010000; // set bit 4(5th bit) of PORTB
+        delay100ms();
+        PORTB = PORTB & 0b11101111; // clear bit 4(5th bit) of PORTB
+        delay100ms();
+    }
+
+    return 0;
+}

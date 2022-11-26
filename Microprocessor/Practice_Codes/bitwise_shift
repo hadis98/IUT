@@ -1,0 +1,39 @@
+// monitor bit7 of portB.
+// if it is 1 => make bit 4 of portB input
+//  else change pin4 of portB to output
+
+#include <avr/io.h>
+int main(void)
+{
+    DDRB = DDRB & ~(1 << 7); // pin7 of  PORTB is input  =0b10000000
+
+    while (1)
+    {
+        if (PINB & (1<<7))          // check pin1(2nd pin) of  PINB is input
+            DDRB = DDRB & ~(1<<4); // bit4 of portB is input
+        else
+            DDRB = DDRB | (1<<4); // bit4 of portB is output
+    }
+
+    return 0;
+}
+
+
+
+//a number that has only a one in position D7
+(1<<7)
+// a number that has only a one in position D2
+(1<<2)
+// a number that has only a one in position D4
+(1<<4) //5th bit(starts with 0)
+// a number that has only a zero in position D5
+~(1<<5)
+// a number that has only a zero in position D3
+~(1<<3)
+// a number that has only a zero in position D3
+~(1<<1)
+
+
+0b00010000 >>3 = 0b00000010 //shifting right 3 times
+//
+0b00010000 << 3 = 0b10000000//shifting left 3 times

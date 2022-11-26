@@ -1,0 +1,74 @@
+#include <avr/io.h>
+int main(void)
+{
+
+    DDRC = 0xFF; // PORTC is output
+    DDRB = 0xFF; // PORTB is output
+    DDRD = 0xFF; // PORTC is output
+
+    PORTB = 0x35 & 0x0F; // ANDing
+    PORTC = 0x04 | 0x68; // ORing
+    PORTD = 0x54 ^ 0x78; // XORing
+    PORTB = ~0x55;       // inverting
+    while (1)
+        ;
+
+    return 0;
+}
+
+// toggle only bit4 of portB continuously
+// without disturbing the rest of the pins of portB
+#include <avr/io.h>
+int main(void)
+{
+    DDRB = 0xFF; // PORTB is output
+    while (1)
+    {
+        PORTB = PORTB | 0b00010000; // set bit 4(5th bit) of PORTB
+        PORTB = PORTB & 0b11101111; // clear bit 4(5th bit) of PORTB
+    }
+
+    return 0;
+}
+
+// monitor bit5 of portC.
+// if it is HIGH send 55H to PortB
+// otherwise, send AAH to portB
+
+#include <avr/io.h>
+int main(void)
+{
+    DDRB = 0xFF; // PORTB is output
+    DDRC = 0x00; // PORTC is input
+    DDRD = 0xFF; // PORTC is output
+    while (1)
+    {
+        if (PINC & 0b00100000) // check bit 5(6th bit) of PINC
+            PORTB = 0x55;
+        else
+            PORTB = 0xAA;
+    }
+
+    return 0;
+}
+
+// door sensor is connected to bit1 of PORTB
+// and an LED is connected to bit7 of PORTC
+// write a program to monitor the door sensor
+// and when it opens turn on the LED
+
+#include <avr/io.h>
+int main(void)
+{
+    DDRB = DDRB & 0b11111101; // pin1 of  PORTB is input
+    DDRC = DDRC | 0b10000000; // pin7 of PORTC is output
+    while (1)
+    {
+        if (PINB & 0b00000010)          // check pin1(2nd pin) of  PINB is input
+            PORTC = PORTC | 0b10000000; // set pin7 (8th pin) of portC   turn on LED
+        else
+            PORTC = PORTC & 0b01111111; // clear pin7 (8th pin) of portC
+    }
+
+    return 0;
+}

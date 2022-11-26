@@ -1,0 +1,35 @@
+// write a program to toggle all bits of PORTB 50000 times
+
+#include <avr/io.h>
+
+int main(void)
+{
+    unsigned int z;
+    DDRB = 0xFF; // PORTB  is output
+    for (z = 0; z < 50000; z++)
+    {
+        PORTB = 0x55;
+        PORTB = 0xAA;
+    }
+    while (1)
+        ;
+    return 0;
+}
+
+// write a program to toggle all bits of PORTB 100000 times
+
+#include <avr/io.h>
+
+int main(void)
+{
+    unsigned long z;
+    DDRB = 0xFF; // PORTB  is output
+    for (z = 0; z < 100000; z++)
+    {
+        PORTB = 0x55;
+        PORTB = 0xAA;
+    }
+    while (1)
+        ;
+    return 0;
+}

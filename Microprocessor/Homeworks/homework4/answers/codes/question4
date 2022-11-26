@@ -1,0 +1,19 @@
+#include <avr/io.h>
+int main(void)
+{
+    unsigned char temp;
+    DDRB = 0;    // PORTB is input
+    DDRC = 0xFF; // PORTC is output
+    DDRD = 0xFF; // PORTD is output
+
+    while (1)
+    {
+        temp = PINB;
+        if (temp % 2 == 0)
+            PORTC = 'E';
+        else
+            PORTD = 'O';
+    }
+
+    return 0;
+}
