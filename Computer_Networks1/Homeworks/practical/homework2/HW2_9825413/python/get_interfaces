@@ -1,0 +1,2 @@
+ip link show | grep -E -o "^[0-9]\: .*:" | sed 's/.$//' | sed 's/^.*: //'
+

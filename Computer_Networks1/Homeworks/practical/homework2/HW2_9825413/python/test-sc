@@ -1,0 +1,14 @@
+./sc delay 100ms 20ms distribution normal loss 0.3% 25% duplicate 1% corrupt 0.1% reorder 25% 50%
+
+
+
+
+#delay 100ms±20ms correlation(25%) normal distributuin 25% will not be reordered! (correlation=50%)
+#P(loss)=0.3e-2 correlation(25%)
+#P(duplicate)=1e-2
+#P(corrupt)=0.1e-2 only a random bit at random offset will flip
+#
+
+sleep 5
+# every thing will go back to normal
+./sc
