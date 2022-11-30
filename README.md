@@ -1,7 +1,8 @@
-# <a href="https://iut.ac.ir/">IUT</a> 
+# <a href="https://iut.ac.ir/">IUT </a> <img src="./IUT_logo.jpg" align="center" width="60"  title="Isfahan University Of Technology"> 
+
 All my projects, homeworks, hand writings, course slides and anything I have learned and done during my undergraduate study at Isfahan University of Technology.
 
----
+
 # Courses
 - ## **Spring Semester 2020** ![Term](https://img.shields.io/badge/Solar--Hijri-Bahman--1398-blue)
   - <a href="https://github.com/hadis98/IUT/tree/main/Advanced%20Programming">Advanced Programming</a> 
