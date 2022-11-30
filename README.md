@@ -29,6 +29,8 @@ All my projects, homeworks, hand writings, course slides and anything I have lea
 - ## **Spring Semester 2022** ![Term](https://img.shields.io/badge/Solar--Hijri-Bahman--1400-orange)
   - <a href="https://github.com/hadis98/IUT/tree/main/Compiler">Compiler</a>     
   - <a href="https://github.com/hadis98/IUT/tree/main/Computer_Networks2">Computer Networks2</a>
+  - <a href="https://github.com/hadis98/IUT/tree/main/Database2">Database2</a>
+  - <a href="https://github.com/hadis98/IUT/tree/main/Guidelines%20For%20Research%20And%20Oral%20Presentation">Guidelines For Research And Oral Presentation</a>
   - <a href="https://github.com/hadis98/IUT/tree/main/Network_Lab">Network Lab</a>     
   - <a href="https://github.com/hadis98/IUT/tree/main/DataBase_Lab">Database Lab</a>
   
