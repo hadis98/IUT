@@ -1,0 +1,12 @@
+1.اول اینکه اگر برنامه با پسوند cpp ذخیره شود, بدون نوشتن sturct اول هر Node میتوانیم برنامه را ران کنیم اما اگر با gcc بخواهیم کامپایل کنیم یعنی با پسوند c. ارور میدهد
+2. دوم در تابع find فضایی در حافظه به temp تعلق نگرفته است پس باید malloc کنیم 
+3.در تابع insert هم فضایی در حافظه به temp تعلق نگرفته است پس باید malloc کنیم 
+4. Node *t = (Node*)malloc(sizeof(Node));
+در خط بالایی به جای *node در size of بهتر است از node استفاده کنیم چون node تشکیل شده از یک node* و یک پوینتر به کاراکتر است 
+5. t->data=(char*)malloc(sizeof(data)+1);
+در خط بالا از انجایی که data یک پوینتر است و باید فضایی در حافظه برایش درنظر گرفته شود اگر نه segmantaion fault یا core dump اتفاق میفتد
+6.temp = find(head, index-1);
+در اینجا باید به جای index , نوشته شود index -1 چون ما مبخواهیم به node ای برویم که یکی قبل تر از index است 
+7.در تابع delete هم مثل موارد ۲و۳ حافظه تعلق نگرفته است 
+ Node *t = (Node*)malloc(sizeof(Node));
+temp=(Node *)malloc(sizeof(Node));
