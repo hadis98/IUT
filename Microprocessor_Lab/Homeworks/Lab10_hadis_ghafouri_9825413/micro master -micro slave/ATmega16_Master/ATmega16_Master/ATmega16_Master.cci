@@ -1,0 +1,13 @@
+VERSION:3 SOURCE_TIMESTAMP:53884C30
+NODE:M LEVEL:0 LINE:7 "F_CPU"
+NODE:I LEVEL:0 LINE:8 "C:\cvavr\inc\mega16.h"
+NODE:I LEVEL:0 LINE:9 "C:\cvavr\inc\delay.h"
+NODE:I LEVEL:0 LINE:10 "C:\cvavr\inc\stdio.h"
+NODE:I LEVEL:0 LINE:11 "C:\cvavr\inc\string.h"
+NODE:I LEVEL:0 LINE:12 "G:\iut micro lab\micro session\section9\section9\proteus+codevision\micro master -micro slave\ATmega16_Master\ATmega16_Master\I2C_Master_H_file.h"
+NODE:I LEVEL:0 LINE:13 "G:\iut micro lab\micro session\section9\section9\proteus+codevision\micro master -micro slave\ATmega16_Master\ATmega16_Master\uartf.h"
+NODE:T LEVEL:0 LINE:13 "uint8_t"
+NODE:M LEVEL:0 LINE:15 "Slave_Write_Address"
+NODE:M LEVEL:0 LINE:16 "Slave_Read_Address"
+NODE:M LEVEL:0 LINE:17 "count"
+NODE:F LEVEL:0 LINE:19 "main(void)"

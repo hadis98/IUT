@@ -1,0 +1,5 @@
+VERSION:3 SOURCE_TIMESTAMP:559F4C72
+NODE:I LEVEL:0 LINE:24 "D:\programfileselfmade\inc\mega16.h"
+NODE:F LEVEL:0 LINE:29 "timer0_ovf_isr(void)"
+NODE:F LEVEL:0 LINE:38 "timer0_comp_isr(void)"
+NODE:F LEVEL:0 LINE:44 "main(void)"

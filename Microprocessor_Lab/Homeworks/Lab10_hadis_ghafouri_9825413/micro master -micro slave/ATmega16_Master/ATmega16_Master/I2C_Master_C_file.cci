@@ -1,0 +1,10 @@
+VERSION:3 SOURCE_TIMESTAMP:53767585
+NODE:I LEVEL:0 LINE:7 "G:\iut micro lab\micro session\section9\section9\proteus+codevision\micro master -micro slave\ATmega16_Master\ATmega16_Master\I2C_Master_H_file.h"
+NODE:F LEVEL:0 LINE:9 "I2C_Init(void)"
+NODE:F LEVEL:0 LINE:15 "I2C_Start(unsigned char write_address)"
+NODE:F LEVEL:0 LINE:36 "I2C_Repeated_Start(unsigned char read_address)"
+NODE:F LEVEL:0 LINE:56 "I2C_Stop(void)"
+NODE:F LEVEL:0 LINE:62 "I2C_Start_Wait(unsigned char write_address)"
+NODE:F LEVEL:0 LINE:85 "I2C_Write(unsigned char data)"
+NODE:F LEVEL:0 LINE:100 "I2C_Read_Ack(void)"
+NODE:F LEVEL:0 LINE:107 "I2C_Read_Nack(void)"

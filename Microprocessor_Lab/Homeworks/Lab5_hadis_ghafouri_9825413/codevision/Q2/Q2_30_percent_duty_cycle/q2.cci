@@ -1,0 +1,4 @@
+VERSION:3 SOURCE_TIMESTAMP:5567566D
+NODE:I LEVEL:0 LINE:24 "C:\cvavr\inc\mega16.h"
+NODE:F LEVEL:0 LINE:28 "main(void)"
+NODE:F LEVEL:0 LINE:41 "init_configs(void)"

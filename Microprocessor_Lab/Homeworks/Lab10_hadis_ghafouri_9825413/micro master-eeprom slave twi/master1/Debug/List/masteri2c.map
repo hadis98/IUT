@@ -1,0 +1,32 @@
+RAM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+twi_tx_index                                                                      0x0160       1
+twi_rx_index                                                                      0x0161       1
+twi_result                                                                        0x0162       1
+slave_address                                                                     0x0163       1
+twi_tx_buffer                                                                     0x0164       2
+bytes_to_tx                                                                       0x0166       1
+twi_rx_buffer                                                                     0x0167       2
+bytes_to_rx                                                                       0x0169       1
+twi_rx_buffer_size                                                                0x016A       1
+twi_slave_rx_handler                                                              0x016B       2
+twi_slave_tx_handler                                                              0x016D       2
+
+EEPROM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+
+Register Allocation
+Variable                                                                          Register  Size
+------------------------------------------------------------------------------------------------
+twi_flag                                                                          R2.0      1bit
+twi_ready                                                                         R2.1      1bit
+
+FLASH Allocation [words]
+Function                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+main                                                                              0x00065     43
+twi_master_init                                                                   0x00090     41
+twi_master_trans                                                                  0x000B9    107
+twi_int_handler                                                                   0x00124    357

@@ -1,0 +1,7 @@
+VERSION:3 SOURCE_TIMESTAMP:5598A998
+NODE:I LEVEL:0 LINE:1 "C:\Users\Win 10\Desktop\university\term7\micro Lab\my_answers\Lab6_hadis_ghafouri_9825413\codevision\Source\general.h"
+NODE:F LEVEL:0 LINE:3 "clear_column2_lcd(void)"
+NODE:F LEVEL:0 LINE:9 "adc_without_interrupts_configs(void)"
+NODE:F LEVEL:0 LINE:21 "read_adc(unsigned char adc_input)"
+NODE:F LEVEL:0 LINE:36 "get_adc_voltage(int index)"
+NODE:F LEVEL:0 LINE:50 "subTask1(void)"

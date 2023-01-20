@@ -1,0 +1,20 @@
+RAM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+sevenSeg                                                                          0x0160      20
+
+EEPROM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+
+Register Allocation
+Variable                                                                          Register  Size
+------------------------------------------------------------------------------------------------
+
+FLASH Allocation [words]
+Function                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+main                                                                              0x00065     18
+writeData                                                                         0x00077     40
+toggleAllLEDS                                                                     0x0009F     25
+showSevenSegData                                                                  0x000B8     90

@@ -1,0 +1,7 @@
+VERSION:3 SOURCE_TIMESTAMP:5564B996
+NODE:I LEVEL:0 LINE:1 "C:\Users\Win 10\Desktop\university\term7\az_micro\my_answers\az4_hadis_ghafouri_9825413\codevision\source\headers.h"
+NODE:F LEVEL:0 LINE:3 "init_main_program(void)"
+NODE:F LEVEL:0 LINE:11 "init_ports_config(void)"
+NODE:F LEVEL:0 LINE:39 "init_interrupts_config(void)"
+NODE:F LEVEL:0 LINE:55 "init_timers_config(void)"
+NODE:F LEVEL:0 LINE:109 "init_lcd_config(void)"

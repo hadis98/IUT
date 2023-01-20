@@ -1,0 +1,12 @@
+VERSION:3 SOURCE_TIMESTAMP:559843EF
+NODE:I LEVEL:0 LINE:1 "C:\Users\Win 10\Desktop\university\term7\micro Lab\my_answers\Lab8_hadis_ghafouri_9825413\codevision\Source\headers.h"
+NODE:I LEVEL:0 LINE:2 "C:\Users\Win 10\Desktop\university\term7\micro Lab\my_answers\Lab8_hadis_ghafouri_9825413\codevision\Source\clock.h"
+NODE:V LEVEL:0 LINE:4 "i -> R12,R13"
+NODE:V LEVEL:0 LINE:4 "j -> RAM:????"
+NODE:C LEVEL:0 LINE:6 "Lab8_Q1_HG -> FLASH"
+NODE:V LEVEL:0 LINE:14 "R_data -> RAM:????"
+NODE:F LEVEL:0 LINE:16 "config_portD(int a,int b)"
+NODE:F LEVEL:0 LINE:23 "config_portA(int index)"
+NODE:F LEVEL:0 LINE:29 "subRoutine1(void)"
+NODE:F LEVEL:0 LINE:45 "subRoutine2(void)"
+NODE:F LEVEL:0 LINE:50 "subRoutine3(void)"

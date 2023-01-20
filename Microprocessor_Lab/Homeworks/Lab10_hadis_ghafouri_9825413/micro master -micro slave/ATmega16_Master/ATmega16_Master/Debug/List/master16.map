@@ -1,0 +1,48 @@
+RAM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+rx_buffer                                                                         0x0198     256
+tx_buffer                                                                         0x0298     256
+_seed                                                                             0x0398       4
+
+EEPROM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+
+Register Allocation
+Variable                                                                          Register  Size
+------------------------------------------------------------------------------------------------
+rx_wr_index                                                                       R5           1
+rx_rd_index                                                                       R4           1
+rx_counter                                                                        R6,R7        2
+rx_buffer_overflow                                                                R2.0      1bit
+tx_wr_index                                                                       R9           1
+tx_rd_index                                                                       R8           1
+tx_counter                                                                        R10,R11      2
+
+FLASH Allocation [words]
+Function                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+I2C_Init                                                                          0x0009E     32
+I2C_Repeated_Start                                                                0x000BE     32
+I2C_Stop                                                                          0x000DE      6
+I2C_Start_Wait                                                                    0x000E4     25
+I2C_Write                                                                         0x000FD     22
+I2C_Read_Ack                                                                      0x00113      6
+I2C_Read_Nack                                                                     0x00119      7
+main                                                                              0x00120     78
+usart_rx_isr                                                                      0x0016E     30
+usart_tx_isr                                                                      0x0018C     24
+putchar                                                                           0x001A4     28
+uart_init                                                                         0x001C0     11
+ftrunc                                                                            0x001CB     49
+floor                                                                             0x001FC     19
+log                                                                               0x0020F    134
+exp                                                                               0x00295    154
+pow                                                                               0x0032F     82
+puts                                                                              0x00381     21
+put_buff_G101                                                                     0x00396     64
+_print_G101                                                                       0x003D6    308
+sprintf                                                                           0x0050A     52
+strlen                                                                            0x0053E     12
+strlenf                                                                           0x0054A     13

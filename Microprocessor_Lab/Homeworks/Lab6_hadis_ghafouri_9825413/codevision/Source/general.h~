@@ -1,0 +1,10 @@
+#ifndef _GENERAL_INCLUDED_
+#define _GENERAL_INCLUDED_
+
+#include <mega16.h>
+#include <delay.h>
+#include <alcd.h>
+#include <stdio.h>
+#include <bool.h>
+
+#endif

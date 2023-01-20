@@ -1,0 +1,6 @@
+VERSION:3 SOURCE_TIMESTAMP:5597B34B
+NODE:I LEVEL:0 LINE:1 "C:\Users\Win 10\Desktop\university\term7\micro Lab\my_answers\Lab8_hadis_ghafouri_9825413\codevision\Source\headers.h"
+NODE:F LEVEL:0 LINE:3 "init_ports(void)"
+NODE:F LEVEL:0 LINE:31 "init_timers(void)"
+NODE:F LEVEL:0 LINE:48 "init_glcd(void)"
+NODE:F LEVEL:0 LINE:84 "init_main(void)"

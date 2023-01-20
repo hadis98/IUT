@@ -1,0 +1,23 @@
+#ifndef _SUB_TASKS_INCLUDED_
+#define _SUB_TASKS_INCLUDED_
+
+#include <mega16.h>
+
+// Alphanumeric LCD functions
+#include <alcd.h>
+#include <delay.h>
+#include <stdio.h>
+
+void q3_custom_pwm_wave(int custom_duty);
+void q4_subTask();
+void q5_subTask();
+void q6_handle_timer1_capture();
+
+void print_speed(int delay);
+void show_speed(int delay);
+void two_phase_step();
+void two_phase_step_reverse();
+void print_dc_motor_speed(float speed);
+// bool has_speeds_difference(float old_speed, float new_speed);
+
+#endif

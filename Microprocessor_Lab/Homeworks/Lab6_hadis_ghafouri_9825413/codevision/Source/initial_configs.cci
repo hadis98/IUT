@@ -1,0 +1,8 @@
+VERSION:3 SOURCE_TIMESTAMP:5598ACC4
+NODE:I LEVEL:0 LINE:1 "C:\Users\Win 10\Desktop\university\term7\micro Lab\my_answers\Lab6_hadis_ghafouri_9825413\codevision\Source\general.h"
+NODE:I LEVEL:0 LINE:2 "C:\Users\Win 10\Desktop\university\term7\micro Lab\my_answers\Lab6_hadis_ghafouri_9825413\codevision\Source\initial_configs.h"
+NODE:F LEVEL:0 LINE:4 "init_main_configs(void)"
+NODE:F LEVEL:0 LINE:12 "init_ports(void)"
+NODE:F LEVEL:0 LINE:40 "init_lcd(void)"
+NODE:F LEVEL:0 LINE:56 "init_interrupts(void)"
+NODE:F LEVEL:0 LINE:66 "init_timers(void)"

@@ -1,0 +1,60 @@
+RAM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+LCD_TIMER_OUTPUT                                                                  0x0190       2
+LCD_CAR_CAPACITY_OUTPUT                                                           0x0192       2
+parking_empty_capacity                                                            0x0194       2
+fr                                                                                0x0196       4
+ocr                                                                               0x019A       4
+T                                                                                 0x019E       2
+_base_y                                                                           0x01A0       4
+_lcd_x                                                                            0x01A4       1
+_lcd_y                                                                            0x01A5       1
+_lcd_maxx                                                                         0x01A6       1
+
+EEPROM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+
+Register Allocation
+Variable                                                                          Register  Size
+------------------------------------------------------------------------------------------------
+hour                                                                              R4,R5        2
+minute                                                                            R6,R7        2
+second                                                                            R8,R9        2
+hundredth_of_second                                                               R10,R11      2
+clicked_timer_button                                                              R13          1
+timer0_accuracy                                                                   R12          1
+
+FLASH Allocation [words]
+Function                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+main                                                                              0x000B3      4
+init_main_program                                                                 0x000B7      5
+init_ports_config                                                                 0x000BC     12
+init_interrupts_config                                                            0x000C8     10
+init_timers_config                                                                0x000D2     29
+init_lcd_config                                                                   0x000EF      8
+ext_int0_isr                                                                      0x000F7      4
+ext_int1_isr                                                                      0x000FB      4
+timer0_ovf_isr                                                                    0x000FF      6
+ext_int2_isr                                                                      0x00105     11
+timer1_compb_isr                                                                  0x00114     19
+parking_capacity_handler                                                          0x00127     76
+timer_button_handler                                                              0x00173     20
+timer_display_digits                                                              0x00187     43
+timer_calculate_digits_handler                                                    0x001B2     43
+calculate_timer_period                                                            0x001DD     89
+output_timer_period_lcd                                                           0x00236      7
+_lcd_write_nibble_G100                                                            0x0023D     20
+_lcd_write_data                                                                   0x00251     12
+lcd_gotoxy                                                                        0x0025D     17
+lcd_clear                                                                         0x0026E     14
+lcd_putchar                                                                       0x0027C     32
+lcd_puts                                                                          0x0029C     17
+lcd_init                                                                          0x002AD     47
+put_buff_G101                                                                     0x002DC     64
+_print_G101                                                                       0x0031C    308
+sprintf                                                                           0x00450     52
+strlen                                                                            0x00484     12
+strlenf                                                                           0x00490     13

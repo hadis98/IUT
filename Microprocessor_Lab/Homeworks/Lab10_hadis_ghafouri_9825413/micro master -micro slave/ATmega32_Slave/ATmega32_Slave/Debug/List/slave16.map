@@ -1,0 +1,38 @@
+RAM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+rx_buffer                                                                         0x019A     256
+tx_buffer                                                                         0x029A     256
+
+EEPROM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+
+Register Allocation
+Variable                                                                          Register  Size
+------------------------------------------------------------------------------------------------
+rx_wr_index                                                                       R5           1
+rx_rd_index                                                                       R4           1
+rx_counter                                                                        R6,R7        2
+rx_buffer_overflow                                                                R2.0      1bit
+tx_wr_index                                                                       R9           1
+tx_rd_index                                                                       R8           1
+tx_counter                                                                        R10,R11      2
+
+FLASH Allocation [words]
+Function                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+usart_rx_isr                                                                      0x00096     30
+usart_tx_isr                                                                      0x000B4     24
+putchar                                                                           0x000CC     28
+uart_init                                                                         0x000E8     11
+main                                                                              0x000F3     44
+I2C_Slave_Init                                                                    0x0011F      7
+I2C_Slave_Transmit                                                                0x00159     65
+I2C_Slave_Receive                                                                 0x0019A     49
+puts                                                                              0x001CB     21
+put_buff_G100                                                                     0x001E0     64
+_print_G100                                                                       0x00220    308
+sprintf                                                                           0x00354     52
+strlen                                                                            0x00388     12
+strlenf                                                                           0x00394     13

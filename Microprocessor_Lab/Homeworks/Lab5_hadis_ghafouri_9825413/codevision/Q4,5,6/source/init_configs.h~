@@ -1,0 +1,19 @@
+#ifndef _INIT_CONFIGS_INCLUDED_
+#define _INIT_CONFIGS_INCLUDED_
+
+#pragma used +
+#include <mega16.h>
+
+// Alphanumeric LCD functions
+#include <alcd.h>
+#include <delay.h>
+
+void init_program_configs();
+void init_lcd();
+void init_timers();
+void init_interrupts();
+void init_ports();
+
+#pragma used -
+
+#endif

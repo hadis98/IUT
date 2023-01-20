@@ -1,0 +1,34 @@
+RAM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+twi_tx_index                                                                      0x0160       1
+twi_rx_index                                                                      0x0161       1
+twi_result                                                                        0x0162       1
+twi_rx_buffer                                                                     0x0163      10
+twi_tx_buffer                                                                     0x016D      10
+slave_address                                                                     0x0177       1
+twi_tx_buffer                                                                     0x0178       2
+bytes_to_tx                                                                       0x017A       1
+twi_rx_buffer                                                                     0x017B       2
+bytes_to_rx                                                                       0x017D       1
+twi_rx_buffer_size                                                                0x017E       1
+twi_slave_rx_handler                                                              0x017F       2
+twi_slave_tx_handler                                                              0x0181       2
+
+EEPROM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+
+Register Allocation
+Variable                                                                          Register  Size
+------------------------------------------------------------------------------------------------
+twi_flag                                                                          R2.0      1bit
+twi_ready                                                                         R2.1      1bit
+
+FLASH Allocation [words]
+Function                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+twi_tx_handler                                                                    0x00060      9
+main                                                                              0x00069     46
+twi_slave_init                                                                    0x00097     50
+twi_int_handler                                                                   0x000C9    357

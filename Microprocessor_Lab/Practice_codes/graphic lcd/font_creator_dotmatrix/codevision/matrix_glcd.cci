@@ -1,0 +1,9 @@
+VERSION:3 SOURCE_TIMESTAMP:559F4D5C
+NODE:I LEVEL:0 LINE:24 "C:\cvavr\inc\mega16.h"
+NODE:I LEVEL:0 LINE:27 "C:\cvavr\inc\glcd.h"
+NODE:I LEVEL:0 LINE:31 "C:\cvavr\inc\font5x7.h"
+NODE:I LEVEL:0 LINE:32 "C:\cvavr\inc\delay.h"
+NODE:C LEVEL:0 LINE:35 "test_rows8x8 -> FLASH"
+NODE:V LEVEL:0 LINE:39 "R_data -> RAM:????"
+NODE:F LEVEL:0 LINE:43 "main(void)"
+NODE:F LEVEL:0 LINE:68 "init_configs(void)"

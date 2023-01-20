@@ -1,0 +1,19 @@
+#ifndef _headers_INCLUDED_
+#define _headers_INCLUDED_
+
+#pragma used+
+#include <alcd.h>
+#include <delay.h>
+#include <stdio.h>
+#include <string.h> 
+#include <mega16.h>
+#include <subprogram.h>
+#define  data_key[]={
+'0','1','2','3',
+'4','5','6','7',
+'8','9','A','B',
+'C','D','E','F'};
+
+#pragma used-
+
+#endif

@@ -1,0 +1,198 @@
+;/*
+; * ATmega16_Master.c
+; * http://www.electronicwings.com
+; *
+; */
+;
+;#define F_CPU 8000000UL						/* Define CPU clock Frequency e.g. here its 8MHz */
+;#include <mega16.h>							/* Include AVR std. library file */
+;PCODE: $00000000 VOL: 0
+	#ifndef __SLEEP_DEFINED__
+;PCODE: $00000001 VOL: 0
+	#define __SLEEP_DEFINED__
+;PCODE: $00000002 VOL: 0
+	.EQU __se_bit=0x40
+;PCODE: $00000003 VOL: 0
+	.EQU __sm_mask=0xB0
+;PCODE: $00000004 VOL: 0
+	.EQU __sm_powerdown=0x20
+;PCODE: $00000005 VOL: 0
+	.EQU __sm_powersave=0x30
+;PCODE: $00000006 VOL: 0
+	.EQU __sm_standby=0xA0
+;PCODE: $00000007 VOL: 0
+	.EQU __sm_ext_standby=0xB0
+;PCODE: $00000008 VOL: 0
+	.EQU __sm_adc_noise_red=0x10
+;PCODE: $00000009 VOL: 0
+	.SET power_ctrl_reg=mcucr
+;PCODE: $0000000A VOL: 0
+	#endif
+;PCODE: $0000000B VOL: 0
+;PCODE: $0000000C VOL: 0
+;#include <delay.h>						/* Include inbuilt defined Delay header file */
+;#include <stdio.h>							/* Include standard I/O header file */
+;#include <string.h>							/* Include string header file */
+;#include "I2C_Master_H_file.h"				/* Include I2C header file */
+;#include "uartf.h"				/* Include LCD header file */
+;typedef  char  uint8_t;
+;#define Slave_Write_Address		0x20
+;#define Slave_Read_Address		0x21
+;#define	count					10
+;
+;void main(void)
+; 0001 0014 {
+
+	.CSEG
+;PCODE: $0000000D VOL: 0
+; 0001 0015 	char buffer[10];
+; 0001 0016 	uint8_t i;
+; 0001 0017 
+; 0001 0018 	uart_init();								/* Initialize LCD */
+;PCODE: $0000000E VOL: 0
+;	buffer -> Y+0
+;	i -> R17
+;PCODE: $0000000F VOL: 0
+; 0001 0019 	I2C_Init();								/* Initialize I2C */
+;PCODE: $00000010 VOL: 0
+; 0001 001A 
+; 0001 001B 	puts( "Master Device");
+;PCODE: $00000011 VOL: 0
+;PCODE: $00000012 VOL: 0
+;PCODE: $00000013 VOL: 0
+; 0001 001C 
+; 0001 001D 	while (1)
+;PCODE: $00000014 VOL: 0
+; 0001 001E 	{
+; 0001 001F 		puts( "\n\r Sending :       ");
+;PCODE: $00000015 VOL: 0
+;PCODE: $00000016 VOL: 0
+;PCODE: $00000017 VOL: 0
+; 0001 0020 		I2C_Start_Wait(Slave_Write_Address);/* Start I2C communication with SLA+W */
+;PCODE: $00000018 VOL: 0
+;PCODE: $00000019 VOL: 0
+; 0001 0021 		delay_ms(5);
+;PCODE: $0000001A VOL: 0
+;PCODE: $0000001B VOL: 0
+;PCODE: $0000001C VOL: 0
+; 0001 0022 		for ( i = 0; i < count ; i++)
+;PCODE: $0000001D VOL: 0
+;PCODE: $0000001E VOL: 0
+;PCODE: $0000001F VOL: 0
+;PCODE: $00000020 VOL: 0
+;PCODE: $00000021 VOL: 0
+;PCODE: $00000022 VOL: 0
+;PCODE: $00000023 VOL: 0
+;PCODE: $00000024 VOL: 0
+;PCODE: $00000025 VOL: 0
+; 0001 0023 		{
+; 0001 0024 			sprintf(buffer, "%d    ",i);
+;PCODE: $00000026 VOL: 0
+;PCODE: $00000027 VOL: 0
+;PCODE: $00000028 VOL: 0
+;PCODE: $00000029 VOL: 0
+;PCODE: $0000002A VOL: 0
+;PCODE: $0000002B VOL: 0
+;PCODE: $0000002C VOL: 0
+;PCODE: $0000002D VOL: 0
+;PCODE: $0000002E VOL: 0
+;PCODE: $0000002F VOL: 0
+;PCODE: $00000030 VOL: 0
+;PCODE: $00000031 VOL: 0
+; 0001 0025 			puts(buffer);
+;PCODE: $00000032 VOL: 0
+;PCODE: $00000033 VOL: 0
+; 0001 0026 			I2C_Write(i);					/* Send Incrementing count */
+;PCODE: $00000034 VOL: 0
+;PCODE: $00000035 VOL: 0
+; 0001 0027 			delay_ms(500);
+;PCODE: $00000036 VOL: 0
+;PCODE: $00000037 VOL: 0
+; 0001 0028 		}
+;PCODE: $00000038 VOL: 0
+;PCODE: $00000039 VOL: 0
+;PCODE: $0000003A VOL: 0
+;PCODE: $0000003B VOL: 0
+;PCODE: $0000003C VOL: 0
+; 0001 0029 		puts( "\n\r Receiving :       ");
+;PCODE: $0000003D VOL: 0
+;PCODE: $0000003E VOL: 0
+;PCODE: $0000003F VOL: 0
+; 0001 002A 		I2C_Repeated_Start(Slave_Read_Address);	/* Repeated Start I2C communication with SLA+R */
+;PCODE: $00000040 VOL: 0
+;PCODE: $00000041 VOL: 0
+; 0001 002B 		delay_ms(5);
+;PCODE: $00000042 VOL: 0
+;PCODE: $00000043 VOL: 0
+;PCODE: $00000044 VOL: 0
+; 0001 002C 		for ( i = 0; i < count; i++)
+;PCODE: $00000045 VOL: 0
+;PCODE: $00000046 VOL: 0
+;PCODE: $00000047 VOL: 0
+;PCODE: $00000048 VOL: 0
+;PCODE: $00000049 VOL: 0
+;PCODE: $0000004A VOL: 0
+;PCODE: $0000004B VOL: 0
+;PCODE: $0000004C VOL: 0
+;PCODE: $0000004D VOL: 0
+; 0001 002D 		{
+; 0001 002E 			if(i < count - 1)
+;PCODE: $0000004E VOL: 0
+;PCODE: $0000004F VOL: 0
+;PCODE: $00000050 VOL: 0
+; 0001 002F 				sprintf(buffer, "%d    ", I2C_Read_Ack());/* Read and send Acknowledge of data */
+;PCODE: $00000051 VOL: 0
+;PCODE: $00000052 VOL: 0
+;PCODE: $00000053 VOL: 0
+;PCODE: $00000054 VOL: 0
+;PCODE: $00000055 VOL: 0
+;PCODE: $00000056 VOL: 0
+;PCODE: $00000057 VOL: 0
+;PCODE: $00000058 VOL: 0
+;PCODE: $00000059 VOL: 0
+;PCODE: $0000005A VOL: 0
+;PCODE: $0000005B VOL: 0
+;PCODE: $0000005C VOL: 0
+; 0001 0030 			else
+;PCODE: $0000005D VOL: 0
+;PCODE: $0000005E VOL: 0
+; 0001 0031 				sprintf(buffer, "%d    ", I2C_Read_Nack());/* Read and Not Acknowledge to data */
+;PCODE: $0000005F VOL: 0
+;PCODE: $00000060 VOL: 0
+;PCODE: $00000061 VOL: 0
+;PCODE: $00000062 VOL: 0
+;PCODE: $00000063 VOL: 0
+;PCODE: $00000064 VOL: 0
+;PCODE: $00000065 VOL: 0
+;PCODE: $00000066 VOL: 0
+;PCODE: $00000067 VOL: 0
+;PCODE: $00000068 VOL: 0
+;PCODE: $00000069 VOL: 0
+;PCODE: $0000006A VOL: 0
+; 0001 0032 			puts(buffer);
+;PCODE: $0000006B VOL: 0
+;PCODE: $0000006C VOL: 0
+;PCODE: $0000006D VOL: 0
+; 0001 0033 			delay_ms(500);
+;PCODE: $0000006E VOL: 0
+;PCODE: $0000006F VOL: 0
+; 0001 0034 		}
+;PCODE: $00000070 VOL: 0
+;PCODE: $00000071 VOL: 0
+;PCODE: $00000072 VOL: 0
+;PCODE: $00000073 VOL: 0
+;PCODE: $00000074 VOL: 0
+; 0001 0035 		I2C_Stop();							/* Stop I2C */
+;PCODE: $00000075 VOL: 0
+; 0001 0036 	}
+;PCODE: $00000076 VOL: 0
+;PCODE: $00000077 VOL: 0
+; 0001 0037 }
+;PCODE: $00000078 VOL: 0
+;PCODE: $00000079 VOL: 0
+;PCODE: $0000007A VOL: 0
+;PCODE: $0000007B VOL: 0
+
+	.DSEG
+_0x20003:
+	.BYTE 0x38

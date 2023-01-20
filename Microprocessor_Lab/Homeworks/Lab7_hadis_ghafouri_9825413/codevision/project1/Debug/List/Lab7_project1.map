@@ -1,0 +1,34 @@
+RAM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+
+EEPROM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+
+Register Allocation
+Variable                                                                          Register  Size
+------------------------------------------------------------------------------------------------
+
+FLASH Allocation [words]
+Function                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+main                                                                              0x0006E      5
+init_configs                                                                      0x00073      9
+init_PORTS                                                                        0x0007C     10
+init_TIMERS                                                                       0x00086     20
+init_INTERRUPTS                                                                   0x0009A      4
+init_USART                                                                        0x0009E     11
+init_ANALOG                                                                       0x000A9      5
+init_ADC                                                                          0x000AE      3
+init_SPI                                                                          0x000B1      3
+init_TWI                                                                          0x000B4      3
+subTask1_V1                                                                       0x000B7     32
+getchar                                                                           0x000D7      4
+putchar                                                                           0x000DB      7
+gets                                                                              0x000E2     47
+put_usart_G100                                                                    0x00111     13
+_print_G100                                                                       0x0011E    308
+printf                                                                            0x00252     37
+strlen                                                                            0x00277     12
+strlenf                                                                           0x00283     13

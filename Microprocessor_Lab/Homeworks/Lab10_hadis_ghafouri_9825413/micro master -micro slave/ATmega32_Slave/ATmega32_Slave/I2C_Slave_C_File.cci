@@ -1,0 +1,6 @@
+VERSION:3 SOURCE_TIMESTAMP:537771F8
+NODE:I LEVEL:0 LINE:6 "G:\iut micro lab\micro session\section9\section9\proteus+codevision\micro master -micro slave\ATmega32_Slave\ATmega32_Slave\I2C_Slave_H_File.h"
+NODE:F LEVEL:0 LINE:8 "I2C_Slave_Init(int slave_address)"
+NODE:F LEVEL:0 LINE:13 "I2C_Slave_Listen(void)"
+NODE:F LEVEL:0 LINE:31 "I2C_Slave_Transmit(unsigned char data)"
+NODE:F LEVEL:0 LINE:56 "I2C_Slave_Receive(void)"

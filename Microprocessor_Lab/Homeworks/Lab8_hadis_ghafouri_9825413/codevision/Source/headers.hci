@@ -1,0 +1,9 @@
+VERSION:3 SOURCE_TIMESTAMP:559843F8
+NODE:M LEVEL:0 LINE:2 "_HEADERS_INCLUDED_"
+NODE:I LEVEL:0 LINE:4 "C:\cvavr\inc\mega16.h"
+NODE:I LEVEL:0 LINE:5 "C:\cvavr\inc\delay.h"
+NODE:I LEVEL:0 LINE:6 "C:\cvavr\inc\math.h"
+NODE:I LEVEL:0 LINE:8 "C:\cvavr\inc\glcd.h"
+NODE:I LEVEL:0 LINE:10 "C:\cvavr\inc\font5x7.h"
+NODE:I LEVEL:0 LINE:11 ".\Source\picture.h"
+NODE:I LEVEL:0 LINE:12 "C:\cvavr\inc\stdio.h"

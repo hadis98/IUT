@@ -1,0 +1,268 @@
+;/*******************************************************
+;This program was created by the
+;CodeWizardAVR V3.12 Advanced
+;Automatic Program Generator
+;© Copyright 1998-2014 Pavel Haiduc, HP InfoTech s.r.l.
+;http://www.hpinfotech.com
+;
+;Project :
+;Version :
+;Date    : 12/30/2022
+;Author  :
+;Company :
+;Comments:
+;
+;
+;Chip type               : ATmega16
+;Program type            : Application
+;AVR Core Clock frequency: 8.000000 MHz
+;Memory model            : Small
+;External RAM size       : 0
+;Data Stack size         : 256
+;*******************************************************/
+;
+;#include <mega16.h>
+;PCODE: $00000000 VOL: 0
+	#ifndef __SLEEP_DEFINED__
+;PCODE: $00000001 VOL: 0
+	#define __SLEEP_DEFINED__
+;PCODE: $00000002 VOL: 0
+	.EQU __se_bit=0x40
+;PCODE: $00000003 VOL: 0
+	.EQU __sm_mask=0xB0
+;PCODE: $00000004 VOL: 0
+	.EQU __sm_powerdown=0x20
+;PCODE: $00000005 VOL: 0
+	.EQU __sm_powersave=0x30
+;PCODE: $00000006 VOL: 0
+	.EQU __sm_standby=0xA0
+;PCODE: $00000007 VOL: 0
+	.EQU __sm_ext_standby=0xB0
+;PCODE: $00000008 VOL: 0
+	.EQU __sm_adc_noise_red=0x10
+;PCODE: $00000009 VOL: 0
+	.SET power_ctrl_reg=mcucr
+;PCODE: $0000000A VOL: 0
+	#endif
+;PCODE: $0000000B VOL: 0
+;PCODE: $0000000C VOL: 0
+;
+;// Declare your global variables here
+;
+;// Standard Input/Output functions
+;#include <stdio.h>
+;
+;void main(void)
+; 0000 0020 {
+
+	.CSEG
+;PCODE: $0000000D VOL: 0
+; 0000 0021 char a;
+; 0000 0022 
+; 0000 0023 // Declare your local variables here
+; 0000 0024 
+; 0000 0025 // Input/Output Ports initialization
+; 0000 0026 // Port A initialization
+; 0000 0027 // Function: Bit7=In Bit6=In Bit5=In Bit4=In Bit3=In Bit2=In Bit1=In Bit0=In
+; 0000 0028 DDRA=(0<<DDA7) | (0<<DDA6) | (0<<DDA5) | (0<<DDA4) | (0<<DDA3) | (0<<DDA2) | (0<<DDA1) | (0<<DDA0);
+;	a -> R17
+;PCODE: $0000000E VOL: 0
+;PCODE: $0000000F VOL: 0
+; 0000 0029 // State: Bit7=T Bit6=T Bit5=T Bit4=T Bit3=T Bit2=T Bit1=T Bit0=T
+; 0000 002A PORTA=(0<<PORTA7) | (0<<PORTA6) | (0<<PORTA5) | (0<<PORTA4) | (0<<PORTA3) | (0<<PORTA2) | (0<<PORTA1) | (0<<PORTA0);
+;PCODE: $00000010 VOL: 0
+;PCODE: $00000011 VOL: 0
+; 0000 002B 
+; 0000 002C // Port B initialization
+; 0000 002D // Function: Bit7=In Bit6=In Bit5=In Bit4=In Bit3=In Bit2=In Bit1=In Bit0=In
+; 0000 002E DDRB=(0<<DDB7) | (0<<DDB6) | (0<<DDB5) | (0<<DDB4) | (0<<DDB3) | (0<<DDB2) | (0<<DDB1) | (0<<DDB0);
+;PCODE: $00000012 VOL: 0
+;PCODE: $00000013 VOL: 0
+; 0000 002F // State: Bit7=T Bit6=T Bit5=T Bit4=T Bit3=T Bit2=T Bit1=T Bit0=T
+; 0000 0030 PORTB=(0<<PORTB7) | (0<<PORTB6) | (0<<PORTB5) | (0<<PORTB4) | (0<<PORTB3) | (0<<PORTB2) | (0<<PORTB1) | (0<<PORTB0);
+;PCODE: $00000014 VOL: 0
+;PCODE: $00000015 VOL: 0
+; 0000 0031 
+; 0000 0032 // Port C initialization
+; 0000 0033 // Function: Bit7=In Bit6=In Bit5=In Bit4=In Bit3=In Bit2=In Bit1=In Bit0=In
+; 0000 0034 DDRC=(0<<DDC7) | (0<<DDC6) | (0<<DDC5) | (0<<DDC4) | (0<<DDC3) | (0<<DDC2) | (0<<DDC1) | (0<<DDC0);
+;PCODE: $00000016 VOL: 0
+;PCODE: $00000017 VOL: 0
+; 0000 0035 // State: Bit7=T Bit6=T Bit5=T Bit4=T Bit3=T Bit2=T Bit1=T Bit0=T
+; 0000 0036 PORTC=(0<<PORTC7) | (0<<PORTC6) | (0<<PORTC5) | (0<<PORTC4) | (0<<PORTC3) | (0<<PORTC2) | (0<<PORTC1) | (0<<PORTC0);
+;PCODE: $00000018 VOL: 0
+;PCODE: $00000019 VOL: 0
+; 0000 0037 
+; 0000 0038 // Port D initialization
+; 0000 0039 // Function: Bit7=In Bit6=In Bit5=In Bit4=In Bit3=In Bit2=In Bit1=In Bit0=In
+; 0000 003A DDRD=(0<<DDD7) | (0<<DDD6) | (0<<DDD5) | (0<<DDD4) | (0<<DDD3) | (0<<DDD2) | (0<<DDD1) | (0<<DDD0);
+;PCODE: $0000001A VOL: 0
+;PCODE: $0000001B VOL: 0
+; 0000 003B // State: Bit7=T Bit6=T Bit5=T Bit4=T Bit3=T Bit2=T Bit1=T Bit0=T
+; 0000 003C PORTD=(0<<PORTD7) | (0<<PORTD6) | (0<<PORTD5) | (0<<PORTD4) | (0<<PORTD3) | (0<<PORTD2) | (0<<PORTD1) | (0<<PORTD0);
+;PCODE: $0000001C VOL: 0
+;PCODE: $0000001D VOL: 0
+; 0000 003D 
+; 0000 003E // Timer/Counter 0 initialization
+; 0000 003F // Clock source: System Clock
+; 0000 0040 // Clock value: Timer 0 Stopped
+; 0000 0041 // Mode: Normal top=0xFF
+; 0000 0042 // OC0 output: Disconnected
+; 0000 0043 TCCR0=(0<<WGM00) | (0<<COM01) | (0<<COM00) | (0<<WGM01) | (0<<CS02) | (0<<CS01) | (0<<CS00);
+;PCODE: $0000001E VOL: 0
+;PCODE: $0000001F VOL: 0
+; 0000 0044 TCNT0=0x00;
+;PCODE: $00000020 VOL: 0
+;PCODE: $00000021 VOL: 0
+; 0000 0045 OCR0=0x00;
+;PCODE: $00000022 VOL: 0
+;PCODE: $00000023 VOL: 0
+; 0000 0046 
+; 0000 0047 // Timer/Counter 1 initialization
+; 0000 0048 // Clock source: System Clock
+; 0000 0049 // Clock value: Timer1 Stopped
+; 0000 004A // Mode: Normal top=0xFFFF
+; 0000 004B // OC1A output: Disconnected
+; 0000 004C // OC1B output: Disconnected
+; 0000 004D // Noise Canceler: Off
+; 0000 004E // Input Capture on Falling Edge
+; 0000 004F // Timer1 Overflow Interrupt: Off
+; 0000 0050 // Input Capture Interrupt: Off
+; 0000 0051 // Compare A Match Interrupt: Off
+; 0000 0052 // Compare B Match Interrupt: Off
+; 0000 0053 TCCR1A=(0<<COM1A1) | (0<<COM1A0) | (0<<COM1B1) | (0<<COM1B0) | (0<<WGM11) | (0<<WGM10);
+;PCODE: $00000024 VOL: 0
+;PCODE: $00000025 VOL: 0
+; 0000 0054 TCCR1B=(0<<ICNC1) | (0<<ICES1) | (0<<WGM13) | (0<<WGM12) | (0<<CS12) | (0<<CS11) | (0<<CS10);
+;PCODE: $00000026 VOL: 0
+;PCODE: $00000027 VOL: 0
+; 0000 0055 TCNT1H=0x00;
+;PCODE: $00000028 VOL: 0
+;PCODE: $00000029 VOL: 0
+; 0000 0056 TCNT1L=0x00;
+;PCODE: $0000002A VOL: 0
+;PCODE: $0000002B VOL: 0
+; 0000 0057 ICR1H=0x00;
+;PCODE: $0000002C VOL: 0
+;PCODE: $0000002D VOL: 0
+; 0000 0058 ICR1L=0x00;
+;PCODE: $0000002E VOL: 0
+;PCODE: $0000002F VOL: 0
+; 0000 0059 OCR1AH=0x00;
+;PCODE: $00000030 VOL: 0
+;PCODE: $00000031 VOL: 0
+; 0000 005A OCR1AL=0x00;
+;PCODE: $00000032 VOL: 0
+;PCODE: $00000033 VOL: 0
+; 0000 005B OCR1BH=0x00;
+;PCODE: $00000034 VOL: 0
+;PCODE: $00000035 VOL: 0
+; 0000 005C OCR1BL=0x00;
+;PCODE: $00000036 VOL: 0
+;PCODE: $00000037 VOL: 0
+; 0000 005D 
+; 0000 005E // Timer/Counter 2 initialization
+; 0000 005F // Clock source: System Clock
+; 0000 0060 // Clock value: Timer2 Stopped
+; 0000 0061 // Mode: Normal top=0xFF
+; 0000 0062 // OC2 output: Disconnected
+; 0000 0063 ASSR=0<<AS2;
+;PCODE: $00000038 VOL: 0
+;PCODE: $00000039 VOL: 0
+; 0000 0064 TCCR2=(0<<PWM2) | (0<<COM21) | (0<<COM20) | (0<<CTC2) | (0<<CS22) | (0<<CS21) | (0<<CS20);
+;PCODE: $0000003A VOL: 0
+;PCODE: $0000003B VOL: 0
+; 0000 0065 TCNT2=0x00;
+;PCODE: $0000003C VOL: 0
+;PCODE: $0000003D VOL: 0
+; 0000 0066 OCR2=0x00;
+;PCODE: $0000003E VOL: 0
+;PCODE: $0000003F VOL: 0
+; 0000 0067 
+; 0000 0068 // Timer(s)/Counter(s) Interrupt(s) initialization
+; 0000 0069 TIMSK=(0<<OCIE2) | (0<<TOIE2) | (0<<TICIE1) | (0<<OCIE1A) | (0<<OCIE1B) | (0<<TOIE1) | (0<<OCIE0) | (0<<TOIE0);
+;PCODE: $00000040 VOL: 0
+;PCODE: $00000041 VOL: 0
+; 0000 006A 
+; 0000 006B // External Interrupt(s) initialization
+; 0000 006C // INT0: Off
+; 0000 006D // INT1: Off
+; 0000 006E // INT2: Off
+; 0000 006F MCUCR=(0<<ISC11) | (0<<ISC10) | (0<<ISC01) | (0<<ISC00);
+;PCODE: $00000042 VOL: 0
+;PCODE: $00000043 VOL: 0
+; 0000 0070 MCUCSR=(0<<ISC2);
+;PCODE: $00000044 VOL: 0
+;PCODE: $00000045 VOL: 0
+; 0000 0071 
+; 0000 0072 // USART initialization
+; 0000 0073 // Communication Parameters: 8 Data, 1 Stop, No Parity
+; 0000 0074 // USART Receiver: On
+; 0000 0075 // USART Transmitter: On
+; 0000 0076 // USART Mode: Asynchronous
+; 0000 0077 // USART Baud Rate: 9600
+; 0000 0078 UCSRA=(0<<RXC) | (0<<TXC) | (0<<UDRE) | (0<<FE) | (0<<DOR) | (0<<UPE) | (0<<U2X) | (0<<MPCM);
+;PCODE: $00000046 VOL: 0
+;PCODE: $00000047 VOL: 0
+; 0000 0079 UCSRB=(0<<RXCIE) | (0<<TXCIE) | (0<<UDRIE) | (1<<RXEN) | (1<<TXEN) | (0<<UCSZ2) | (0<<RXB8) | (0<<TXB8);
+;PCODE: $00000048 VOL: 0
+;PCODE: $00000049 VOL: 0
+; 0000 007A UCSRC=(1<<URSEL) | (0<<UMSEL) | (0<<UPM1) | (0<<UPM0) | (0<<USBS) | (1<<UCSZ1) | (1<<UCSZ0) | (0<<UCPOL);
+;PCODE: $0000004A VOL: 0
+;PCODE: $0000004B VOL: 0
+; 0000 007B UBRRH=0x00;
+;PCODE: $0000004C VOL: 0
+;PCODE: $0000004D VOL: 0
+; 0000 007C UBRRL=0x33;
+;PCODE: $0000004E VOL: 0
+;PCODE: $0000004F VOL: 0
+; 0000 007D 
+; 0000 007E // Analog Comparator initialization
+; 0000 007F // Analog Comparator: Off
+; 0000 0080 // The Analog Comparator's positive input is
+; 0000 0081 // connected to the AIN0 pin
+; 0000 0082 // The Analog Comparator's negative input is
+; 0000 0083 // connected to the AIN1 pin
+; 0000 0084 ACSR=(1<<ACD) | (0<<ACBG) | (0<<ACO) | (0<<ACI) | (0<<ACIE) | (0<<ACIC) | (0<<ACIS1) | (0<<ACIS0);
+;PCODE: $00000050 VOL: 0
+;PCODE: $00000051 VOL: 0
+; 0000 0085 SFIOR=(0<<ACME);
+;PCODE: $00000052 VOL: 0
+;PCODE: $00000053 VOL: 0
+; 0000 0086 
+; 0000 0087 // ADC initialization
+; 0000 0088 // ADC disabled
+; 0000 0089 ADCSRA=(0<<ADEN) | (0<<ADSC) | (0<<ADATE) | (0<<ADIF) | (0<<ADIE) | (0<<ADPS2) | (0<<ADPS1) | (0<<ADPS0);
+;PCODE: $00000054 VOL: 0
+;PCODE: $00000055 VOL: 0
+; 0000 008A 
+; 0000 008B // SPI initialization
+; 0000 008C // SPI disabled
+; 0000 008D SPCR=(0<<SPIE) | (0<<SPE) | (0<<DORD) | (0<<MSTR) | (0<<CPOL) | (0<<CPHA) | (0<<SPR1) | (0<<SPR0);
+;PCODE: $00000056 VOL: 0
+;PCODE: $00000057 VOL: 0
+; 0000 008E 
+; 0000 008F // TWI initialization
+; 0000 0090 // TWI disabled
+; 0000 0091 TWCR=(0<<TWEA) | (0<<TWSTA) | (0<<TWSTO) | (0<<TWEN) | (0<<TWIE);
+;PCODE: $00000058 VOL: 0
+;PCODE: $00000059 VOL: 0
+; 0000 0092 
+; 0000 0093 while (1)
+;PCODE: $0000005A VOL: 0
+; 0000 0094       {
+; 0000 0095       // Place your code here
+; 0000 0096       a = getchar();
+;PCODE: $0000005B VOL: 0
+;PCODE: $0000005C VOL: 0
+; 0000 0097       putchar(a);
+;PCODE: $0000005D VOL: 0
+;PCODE: $0000005E VOL: 0
+; 0000 0098 
+; 0000 0099       }
+;PCODE: $0000005F VOL: 0
+;PCODE: $00000060 VOL: 0
+; 0000 009A }
+;PCODE: $00000061 VOL: 0
+;PCODE: $00000062 VOL: 0
+;PCODE: $00000063 VOL: 0

@@ -1,0 +1,3 @@
+main DSTACK_USAGE:0 DSTACK_LEVEL:0 FILE:"az2.c" LINE:12
+showSevenSegData DSTACK_USAGE:15 DSTACK_LEVEL:15 FILE:"source\subroutines_c.c" LINE:90
+writeData DSTACK_USAGE:3 DSTACK_LEVEL:18 FILE:"source\subroutines_c.c" LINE:44

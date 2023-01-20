@@ -1,0 +1,12 @@
+VERSION:3 SOURCE_TIMESTAMP:5598AEED
+NODE:I LEVEL:0 LINE:13 ".\Source\general.h"
+NODE:I LEVEL:0 LINE:14 ".\Source\initial_configs.h"
+NODE:I LEVEL:0 LINE:15 ".\Source\subTasks.h"
+NODE:V LEVEL:0 LINE:17 "adc -> RAM:????"
+NODE:V LEVEL:0 LINE:18 "counter -> RAM:????"
+NODE:V LEVEL:0 LINE:19 "adc_difference -> RAM:????"
+NODE:V LEVEL:0 LINE:20 "myocr -> RAM:????"
+NODE:V LEVEL:0 LINE:20 "duty_cycle -> RAM:????"
+NODE:V LEVEL:0 LINE:21 "adc_data -> RAM:????"
+NODE:V LEVEL:0 LINE:22 "adc_data_copy -> RAM:????"
+NODE:F LEVEL:0 LINE:24 "main(void)"

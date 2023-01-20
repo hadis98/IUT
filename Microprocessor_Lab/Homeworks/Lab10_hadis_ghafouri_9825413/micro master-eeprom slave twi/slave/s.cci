@@ -1,0 +1,11 @@
+VERSION:3 SOURCE_TIMESTAMP:53766268
+NODE:I LEVEL:0 LINE:24 "C:\cvavr\inc\mega16.h"
+NODE:I LEVEL:0 LINE:29 "C:\cvavr\inc\twi.h"
+NODE:I LEVEL:0 LINE:30 "C:\cvavr\inc\delay.h"
+NODE:M LEVEL:0 LINE:33 "TWI_RX_BUFFER_SIZE"
+NODE:V LEVEL:0 LINE:34 "twi_rx_buffer -> RAM:????"
+NODE:M LEVEL:0 LINE:37 "TWI_TX_BUFFER_SIZE"
+NODE:V LEVEL:0 LINE:38 "twi_tx_buffer -> RAM:????"
+NODE:F LEVEL:0 LINE:43 "twi_rx_handler(_Bool rx_complete)"
+NODE:F LEVEL:0 LINE:80 "twi_tx_handler(_Bool tx_complete)"
+NODE:F LEVEL:0 LINE:98 "main(void)"

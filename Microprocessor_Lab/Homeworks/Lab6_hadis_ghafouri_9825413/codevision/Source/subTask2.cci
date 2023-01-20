@@ -1,0 +1,9 @@
+VERSION:3 SOURCE_TIMESTAMP:5598B094
+NODE:I LEVEL:0 LINE:1 "C:\Users\Win 10\Desktop\university\term7\micro Lab\my_answers\Lab6_hadis_ghafouri_9825413\codevision\Source\general.h"
+NODE:I LEVEL:0 LINE:2 "C:\Users\Win 10\Desktop\university\term7\micro Lab\my_answers\Lab6_hadis_ghafouri_9825413\codevision\Source\subTasks.h"
+NODE:F LEVEL:0 LINE:6 "adc_with_interrupts_configs(void)"
+NODE:F LEVEL:0 LINE:17 "show_interrupt_adc_output(int adc_index,int value)"
+NODE:F LEVEL:0 LINE:35 "is_5_percent_difference(long adc,int adc_index)"
+NODE:F LEVEL:0 LINE:46 "update_adc(int adc_data,int adc_index)"
+NODE:F LEVEL:0 LINE:63 "adc_isr(void)"
+NODE:V LEVEL:0 LINE:66 "input_index_S0030004000 -> RAM:????"

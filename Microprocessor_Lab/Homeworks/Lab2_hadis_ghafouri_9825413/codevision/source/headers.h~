@@ -1,0 +1,24 @@
+#ifndef _headers_INCLUDED_
+#define _headers_INCLUDED_
+#include <io.h>
+#include <delay.h>
+#include <subroutines_h.h>
+
+#define portA 1
+#define portB 2
+#define portC 3
+#define portD 4
+extern unsigned int sevenSeg[] = {
+    0b00111111, // number 0 on 7_seg
+    0b00000110, // number 1 on 7_seg
+    0b01011011, // number 2 on 7_seg
+    0b01001111, // number 3 on 7_seg
+    0b01100110, // number 4 on 7_seg
+    0b01101101, // number 5 on 7_seg
+    0b01111101, // number 6 on 7_seg
+    0b00000111, // number 7 on 7_seg
+    0b01111111, // number 8 on 7_seg
+    0b01101111, // number 9 on 7_seg
+};
+
+#endif

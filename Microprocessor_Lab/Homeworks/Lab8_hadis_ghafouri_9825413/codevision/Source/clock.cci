@@ -1,0 +1,12 @@
+VERSION:3 SOURCE_TIMESTAMP:55984B58
+NODE:I LEVEL:0 LINE:1 "C:\Users\Win 10\Desktop\university\term7\micro Lab\my_answers\Lab8_hadis_ghafouri_9825413\codevision\Source\headers.h"
+NODE:V LEVEL:0 LINE:3 "*output_time -> R4,R5"
+NODE:V LEVEL:0 LINE:5 "hour -> R6,R7"
+NODE:V LEVEL:0 LINE:6 "minute -> R8,R9"
+NODE:V LEVEL:0 LINE:7 "second -> R10,R11"
+NODE:F LEVEL:0 LINE:9 "get_radian(float degree)"
+NODE:F LEVEL:0 LINE:14 "get_clock_unit_x2(int x1,int amount,unsigned char time_unit)"
+NODE:F LEVEL:0 LINE:39 "get_clock_unit_y2(int y1,int amount,unsigned char time_unit)"
+NODE:F LEVEL:0 LINE:64 "draw_clock_lines(int amount,unsigned char time_unit)"
+NODE:F LEVEL:0 LINE:96 "update_clock(void)"
+NODE:F LEVEL:0 LINE:118 "timer1_ovf_isr(void)"

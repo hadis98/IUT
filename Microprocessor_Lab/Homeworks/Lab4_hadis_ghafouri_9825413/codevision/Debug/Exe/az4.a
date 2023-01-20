@@ -1,0 +1,58 @@
+;/*******************************************************
+;Date    : 11/3/2022
+;Author  : hadis ghafouri
+;
+;Chip type               : ATmega16
+;Program type            : Application
+;AVR Core Clock frequency: 8.000000 MHz
+;Memory model            : Small
+;External RAM size       : 0
+;Data Stack size         : 256
+;*******************************************************/
+;#include "headers.h"
+;PCODE: $00000000 VOL: 0
+	#ifndef __SLEEP_DEFINED__
+;PCODE: $00000001 VOL: 0
+	#define __SLEEP_DEFINED__
+;PCODE: $00000002 VOL: 0
+	.EQU __se_bit=0x40
+;PCODE: $00000003 VOL: 0
+	.EQU __sm_mask=0xB0
+;PCODE: $00000004 VOL: 0
+	.EQU __sm_powerdown=0x20
+;PCODE: $00000005 VOL: 0
+	.EQU __sm_powersave=0x30
+;PCODE: $00000006 VOL: 0
+	.EQU __sm_standby=0xA0
+;PCODE: $00000007 VOL: 0
+	.EQU __sm_ext_standby=0xB0
+;PCODE: $00000008 VOL: 0
+	.EQU __sm_adc_noise_red=0x10
+;PCODE: $00000009 VOL: 0
+	.SET power_ctrl_reg=mcucr
+;PCODE: $0000000A VOL: 0
+	#endif
+;PCODE: $0000000B VOL: 0
+;PCODE: $0000000C VOL: 0
+;
+;void main(void)
+; 0000 000F {
+
+	.CSEG
+;PCODE: $0000000D VOL: 0
+; 0000 0010 // Global enable interrupts
+; 0000 0011 #asm("sei");
+;PCODE: $0000000E VOL: 0
+	sei
+;PCODE: $0000000F VOL: 0
+; 0000 0012 init_main_program();
+;PCODE: $00000010 VOL: 0
+; 0000 0013 while (1){}
+;PCODE: $00000011 VOL: 0
+;PCODE: $00000012 VOL: 0
+;PCODE: $00000013 VOL: 0
+; 0000 0014 
+; 0000 0015 }
+;PCODE: $00000014 VOL: 0
+;PCODE: $00000015 VOL: 0
+;PCODE: $00000016 VOL: 0

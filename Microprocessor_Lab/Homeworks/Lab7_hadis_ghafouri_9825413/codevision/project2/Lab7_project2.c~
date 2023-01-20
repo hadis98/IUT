@@ -1,0 +1,59 @@
+/*******************************************************
+This program was created by the
+CodeWizardAVR V3.12 Advanced
+Project : LAB7-PROJECT2-MICRO_LAB
+Version :
+Date    : 12/26/2022
+Author  : HADIS GHAFOURI 9825413
+Company :
+Comments:
+
+
+Chip type               : ATmega16
+Program type            : Application
+AVR Core Clock frequency: 8.000000 MHz
+Memory model            : Small
+External RAM size       : 0
+Data Stack size         : 256
+*******************************************************/
+
+#include "headers.h"
+#include "initial_configs.h"
+#include "subTasks.h"
+
+void main(void)
+{
+   char entered_char;
+   int result;
+   char *subTask3_entered_str;
+
+#asm("sei")
+
+   init_configs();
+
+   // bool start_subTask3 = false;
+   lcd_gotoxy(0, 0);
+   lcd_puts("Part2 is running!");
+
+   while (1)
+   {
+
+      entered_char = getchar();
+
+      if (subTask2(entered_char) == -1)
+      {
+         // start_subTask3 = true;
+         lcd_clear();
+         lcd_puts("Part2 is ending!");
+         delay_ms(2000);
+         break;
+      }
+      // Place your code here
+   }
+
+   while (1)
+   {
+      scanf("%s", subTask3_entered_str);
+      subTask3(subTask3_entered_str);
+   }
+}

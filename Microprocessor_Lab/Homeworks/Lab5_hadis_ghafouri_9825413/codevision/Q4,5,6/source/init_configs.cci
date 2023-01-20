@@ -1,0 +1,7 @@
+VERSION:3 SOURCE_TIMESTAMP:55697D63
+NODE:I LEVEL:0 LINE:1 "C:\Users\Win 10\Desktop\university\term7\az_micro\my_answers\az5_hadis_ghafouri_9825413\codevision\Q4,5,6\source\init_configs.h"
+NODE:F LEVEL:0 LINE:3 "init_program_configs(void)"
+NODE:F LEVEL:0 LINE:11 "init_ports(void)"
+NODE:F LEVEL:0 LINE:39 "init_lcd(void)"
+NODE:F LEVEL:0 LINE:55 "init_timers(void)"
+NODE:F LEVEL:0 LINE:110 "init_interrupts(void)"

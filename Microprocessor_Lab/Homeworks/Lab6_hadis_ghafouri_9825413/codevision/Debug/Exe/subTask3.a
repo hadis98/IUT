@@ -1,0 +1,102 @@
+;#include "subTasks.h"
+;PCODE: $00000000 VOL: 0
+	#ifndef __SLEEP_DEFINED__
+;PCODE: $00000001 VOL: 0
+	#define __SLEEP_DEFINED__
+;PCODE: $00000002 VOL: 0
+	.EQU __se_bit=0x40
+;PCODE: $00000003 VOL: 0
+	.EQU __sm_mask=0xB0
+;PCODE: $00000004 VOL: 0
+	.EQU __sm_powerdown=0x20
+;PCODE: $00000005 VOL: 0
+	.EQU __sm_powersave=0x30
+;PCODE: $00000006 VOL: 0
+	.EQU __sm_standby=0xA0
+;PCODE: $00000007 VOL: 0
+	.EQU __sm_ext_standby=0xB0
+;PCODE: $00000008 VOL: 0
+	.EQU __sm_adc_noise_red=0x10
+;PCODE: $00000009 VOL: 0
+	.SET power_ctrl_reg=mcucr
+;PCODE: $0000000A VOL: 0
+	#endif
+;PCODE: $0000000B VOL: 0
+;PCODE: $0000000C VOL: 0
+;
+;
+;interrupt[TIM0_OVF] void timer0_ovf_isr(void)
+; 0004 0005 {
+
+	.CSEG
+;PCODE: $0000000D VOL: 0
+;PCODE: $0000000E VOL: 0
+; 0004 0006     subTask3();
+;PCODE: $0000000F VOL: 0
+; 0004 0007 }
+;PCODE: $00000010 VOL: 0
+;PCODE: $00000011 VOL: 0
+;PCODE: $00000012 VOL: 0
+;
+;void subTask3()
+; 0004 000A {
+;PCODE: $00000013 VOL: 0
+;PCODE: $00000014 VOL: 0
+; 0004 000B     // OCR0 = 2.55 * duty-cycle
+; 0004 000C     // convert [0%,100%] to [n=0,n=1023]
+; 0004 000D     // => OCR0 = 0.25 * ADC0
+; 0004 000E     duty_cycle = read_adc(0);
+;PCODE: $00000015 VOL: 0
+;PCODE: $00000016 VOL: 0
+;PCODE: $00000017 VOL: 0
+;PCODE: $00000018 VOL: 0
+;PCODE: $00000019 VOL: 0
+; 0004 000F     // duty_cycle = (duty_cycle * 0.087) + 5;
+; 0004 0010     duty_cycle = ((adc * 90) / 1023) + 5;
+;PCODE: $0000001A VOL: 0
+;PCODE: $0000001B VOL: 0
+;PCODE: $0000001C VOL: 0
+;PCODE: $0000001D VOL: 0
+;PCODE: $0000001E VOL: 0
+;PCODE: $0000001F VOL: 0
+;PCODE: $00000020 VOL: 0
+;PCODE: $00000021 VOL: 0
+;PCODE: $00000022 VOL: 0
+;PCODE: $00000023 VOL: 0
+; 0004 0011     myocr = (2.55 * duty_cycle) + 0.5;
+;PCODE: $00000024 VOL: 0
+;PCODE: $00000025 VOL: 0
+;PCODE: $00000026 VOL: 0
+;PCODE: $00000027 VOL: 0
+;PCODE: $00000028 VOL: 0
+;PCODE: $00000029 VOL: 0
+; 0004 0012     OCR0 = floor(myocr);
+;PCODE: $0000002A VOL: 0
+;PCODE: $0000002B VOL: 0
+;PCODE: $0000002C VOL: 0
+;PCODE: $0000002D VOL: 0
+; 0004 0013 }
+;PCODE: $0000002E VOL: 0
+;PCODE: $0000002F VOL: 0
+;
+;void Q3_init_timer0()
+; 0004 0016 {
+;PCODE: $00000030 VOL: 0
+;PCODE: $00000031 VOL: 0
+; 0004 0017     TCCR0 = (1 << WGM00) | (1 << COM01) | (0 << COM00) | (1 << WGM01) | (0 << CS02) | (0 << CS01) | (1 << CS00);
+;PCODE: $00000032 VOL: 0
+;PCODE: $00000033 VOL: 0
+; 0004 0018     TCNT0 = 0x00;
+;PCODE: $00000034 VOL: 0
+;PCODE: $00000035 VOL: 0
+; 0004 0019     OCR0 = 0x00;
+;PCODE: $00000036 VOL: 0
+;PCODE: $00000037 VOL: 0
+; 0004 001A 
+; 0004 001B     // Timer(s)/Counter(s) Interrupt(s) initialization
+; 0004 001C     TIMSK = (0 << OCIE2) | (0 << TOIE2) | (0 << TICIE1) | (0 << OCIE1A) | (0 << OCIE1B) | (0 << TOIE1) | (0 << OCIE0) |  ...
+;PCODE: $00000038 VOL: 0
+;PCODE: $00000039 VOL: 0
+; 0004 001D }
+;PCODE: $0000003A VOL: 0
+;PCODE: $0000003B VOL: 0

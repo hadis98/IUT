@@ -1,0 +1,317 @@
+;#include "headers.h"
+;PCODE: $00000000 VOL: 0
+	#ifndef __SLEEP_DEFINED__
+;PCODE: $00000001 VOL: 0
+	#define __SLEEP_DEFINED__
+;PCODE: $00000002 VOL: 0
+	.EQU __se_bit=0x40
+;PCODE: $00000003 VOL: 0
+	.EQU __sm_mask=0xB0
+;PCODE: $00000004 VOL: 0
+	.EQU __sm_powerdown=0x20
+;PCODE: $00000005 VOL: 0
+	.EQU __sm_powersave=0x30
+;PCODE: $00000006 VOL: 0
+	.EQU __sm_standby=0xA0
+;PCODE: $00000007 VOL: 0
+	.EQU __sm_ext_standby=0xB0
+;PCODE: $00000008 VOL: 0
+	.EQU __sm_adc_noise_red=0x10
+;PCODE: $00000009 VOL: 0
+	.SET power_ctrl_reg=mcucr
+;PCODE: $0000000A VOL: 0
+	#endif
+;PCODE: $0000000B VOL: 0
+;PCODE: $0000000C VOL: 0
+;#include "initial_configs.h"
+;
+;void init_configs()
+; 0001 0005 {
+
+	.CSEG
+;PCODE: $0000000D VOL: 0
+;PCODE: $0000000E VOL: 0
+; 0001 0006     init_PORTS();
+;PCODE: $0000000F VOL: 0
+; 0001 0007     init_LCD();
+;PCODE: $00000010 VOL: 0
+; 0001 0008     init_TIMERS();
+;PCODE: $00000011 VOL: 0
+; 0001 0009     init_INTERRUPTS();
+;PCODE: $00000012 VOL: 0
+; 0001 000A     init_USART();
+;PCODE: $00000013 VOL: 0
+; 0001 000B     init_ANALOG();
+;PCODE: $00000014 VOL: 0
+; 0001 000C     init_ADC();
+;PCODE: $00000015 VOL: 0
+; 0001 000D     init_SPI();
+;PCODE: $00000016 VOL: 0
+; 0001 000E     init_TWI();
+;PCODE: $00000017 VOL: 0
+; 0001 000F }
+;PCODE: $00000018 VOL: 0
+;PCODE: $00000019 VOL: 0
+;
+;void init_PORTS()
+; 0001 0012 {
+;PCODE: $0000001A VOL: 0
+;PCODE: $0000001B VOL: 0
+; 0001 0013     // Port A initialization
+; 0001 0014     // Function: Bit7=In Bit6=In Bit5=In Bit4=In Bit3=In Bit2=In Bit1=In Bit0=In
+; 0001 0015     DDRA = (0 << DDA7) | (0 << DDA6) | (0 << DDA5) | (0 << DDA4) | (0 << DDA3) | (0 << DDA2) | (0 << DDA1) | (0 << DDA0) ...
+;PCODE: $0000001C VOL: 0
+;PCODE: $0000001D VOL: 0
+; 0001 0016     // State: Bit7=T Bit6=T Bit5=T Bit4=T Bit3=T Bit2=T Bit1=T Bit0=T
+; 0001 0017     PORTA = (0 << PORTA7) | (0 << PORTA6) | (0 << PORTA5) | (0 << PORTA4) | (0 << PORTA3) | (0 << PORTA2) | (0 << PORTA1 ...
+;PCODE: $0000001E VOL: 0
+;PCODE: $0000001F VOL: 0
+; 0001 0018 
+; 0001 0019     // Port B initialization
+; 0001 001A     // Function: Bit7=In Bit6=In Bit5=In Bit4=In Bit3=In Bit2=In Bit1=In Bit0=In
+; 0001 001B     DDRB = (0 << DDB7) | (0 << DDB6) | (0 << DDB5) | (0 << DDB4) | (0 << DDB3) | (0 << DDB2) | (0 << DDB1) | (0 << DDB0) ...
+;PCODE: $00000020 VOL: 0
+;PCODE: $00000021 VOL: 0
+; 0001 001C     // State: Bit7=T Bit6=T Bit5=T Bit4=T Bit3=T Bit2=T Bit1=T Bit0=T
+; 0001 001D     PORTB = (0 << PORTB7) | (0 << PORTB6) | (0 << PORTB5) | (0 << PORTB4) | (0 << PORTB3) | (0 << PORTB2) | (0 << PORTB1 ...
+;PCODE: $00000022 VOL: 0
+;PCODE: $00000023 VOL: 0
+; 0001 001E 
+; 0001 001F     // Port C initialization
+; 0001 0020     // Function: Bit7=In Bit6=In Bit5=In Bit4=In Bit3=In Bit2=In Bit1=In Bit0=In
+; 0001 0021     DDRC = (0 << DDC7) | (0 << DDC6) | (0 << DDC5) | (0 << DDC4) | (0 << DDC3) | (0 << DDC2) | (0 << DDC1) | (0 << DDC0) ...
+;PCODE: $00000024 VOL: 0
+;PCODE: $00000025 VOL: 0
+; 0001 0022     // State: Bit7=T Bit6=T Bit5=T Bit4=T Bit3=T Bit2=T Bit1=T Bit0=T
+; 0001 0023     PORTC = (0 << PORTC7) | (0 << PORTC6) | (0 << PORTC5) | (0 << PORTC4) | (0 << PORTC3) | (0 << PORTC2) | (0 << PORTC1 ...
+;PCODE: $00000026 VOL: 0
+;PCODE: $00000027 VOL: 0
+; 0001 0024 
+; 0001 0025     // Port D initialization
+; 0001 0026     // Function: Bit7=In Bit6=In Bit5=In Bit4=In Bit3=In Bit2=In Bit1=In Bit0=In
+; 0001 0027     DDRD = (0 << DDD7) | (0 << DDD6) | (0 << DDD5) | (0 << DDD4) | (0 << DDD3) | (0 << DDD2) | (0 << DDD1) | (0 << DDD0) ...
+;PCODE: $00000028 VOL: 0
+;PCODE: $00000029 VOL: 0
+; 0001 0028     // State: Bit7=T Bit6=T Bit5=T Bit4=T Bit3=T Bit2=T Bit1=T Bit0=T
+; 0001 0029     PORTD = (0 << PORTD7) | (0 << PORTD6) | (0 << PORTD5) | (0 << PORTD4) | (0 << PORTD3) | (0 << PORTD2) | (0 << PORTD1 ...
+;PCODE: $0000002A VOL: 0
+;PCODE: $0000002B VOL: 0
+; 0001 002A }
+;PCODE: $0000002C VOL: 0
+;PCODE: $0000002D VOL: 0
+;
+;void init_LCD()
+; 0001 002D {
+;PCODE: $0000002E VOL: 0
+;PCODE: $0000002F VOL: 0
+; 0001 002E     // Alphanumeric LCD initialization
+; 0001 002F     // Connections are specified in the
+; 0001 0030     // Project|Configure|C Compiler|Libraries|Alphanumeric LCD menu:
+; 0001 0031     // RS - PORTC Bit 0
+; 0001 0032     // RD - PORTC Bit 1
+; 0001 0033     // EN - PORTC Bit 2
+; 0001 0034     // D4 - PORTC Bit 4
+; 0001 0035     // D5 - PORTC Bit 5
+; 0001 0036     // D6 - PORTC Bit 6
+; 0001 0037     // D7 - PORTC Bit 7
+; 0001 0038     // Characters/line: 16
+; 0001 0039     lcd_init(16);
+;PCODE: $00000030 VOL: 0
+;PCODE: $00000031 VOL: 0
+; 0001 003A }
+;PCODE: $00000032 VOL: 0
+;PCODE: $00000033 VOL: 0
+;
+;void init_TIMERS()
+; 0001 003D {
+;PCODE: $00000034 VOL: 0
+;PCODE: $00000035 VOL: 0
+; 0001 003E     // Timer/Counter 0 initialization
+; 0001 003F     // Clock source: System Clock
+; 0001 0040     // Clock value: Timer 0 Stopped
+; 0001 0041     // Mode: Normal top=0xFF
+; 0001 0042     // OC0 output: Disconnected
+; 0001 0043     TCCR0 = (0 << WGM00) | (0 << COM01) | (0 << COM00) | (0 << WGM01) | (0 << CS02) | (0 << CS01) | (0 << CS00);
+;PCODE: $00000036 VOL: 0
+;PCODE: $00000037 VOL: 0
+; 0001 0044     TCNT0 = 0x00;
+;PCODE: $00000038 VOL: 0
+;PCODE: $00000039 VOL: 0
+; 0001 0045     OCR0 = 0x00;
+;PCODE: $0000003A VOL: 0
+;PCODE: $0000003B VOL: 0
+; 0001 0046 
+; 0001 0047     // Timer/Counter 1 initialization
+; 0001 0048     // Clock source: System Clock
+; 0001 0049     // Clock value: Timer1 Stopped
+; 0001 004A     // Mode: Normal top=0xFFFF
+; 0001 004B     // OC1A output: Disconnected
+; 0001 004C     // OC1B output: Disconnected
+; 0001 004D     // Noise Canceler: Off
+; 0001 004E     // Input Capture on Falling Edge
+; 0001 004F     // Timer1 Overflow Interrupt: Off
+; 0001 0050     // Input Capture Interrupt: Off
+; 0001 0051     // Compare A Match Interrupt: Off
+; 0001 0052     // Compare B Match Interrupt: Off
+; 0001 0053     TCCR1A = (0 << COM1A1) | (0 << COM1A0) | (0 << COM1B1) | (0 << COM1B0) | (0 << WGM11) | (0 << WGM10);
+;PCODE: $0000003C VOL: 0
+;PCODE: $0000003D VOL: 0
+; 0001 0054     TCCR1B = (0 << ICNC1) | (0 << ICES1) | (0 << WGM13) | (0 << WGM12) | (0 << CS12) | (0 << CS11) | (0 << CS10);
+;PCODE: $0000003E VOL: 0
+;PCODE: $0000003F VOL: 0
+; 0001 0055     TCNT1H = 0x00;
+;PCODE: $00000040 VOL: 0
+;PCODE: $00000041 VOL: 0
+; 0001 0056     TCNT1L = 0x00;
+;PCODE: $00000042 VOL: 0
+;PCODE: $00000043 VOL: 0
+; 0001 0057     ICR1H = 0x00;
+;PCODE: $00000044 VOL: 0
+;PCODE: $00000045 VOL: 0
+; 0001 0058     ICR1L = 0x00;
+;PCODE: $00000046 VOL: 0
+;PCODE: $00000047 VOL: 0
+; 0001 0059     OCR1AH = 0x00;
+;PCODE: $00000048 VOL: 0
+;PCODE: $00000049 VOL: 0
+; 0001 005A     OCR1AL = 0x00;
+;PCODE: $0000004A VOL: 0
+;PCODE: $0000004B VOL: 0
+; 0001 005B     OCR1BH = 0x00;
+;PCODE: $0000004C VOL: 0
+;PCODE: $0000004D VOL: 0
+; 0001 005C     OCR1BL = 0x00;
+;PCODE: $0000004E VOL: 0
+;PCODE: $0000004F VOL: 0
+; 0001 005D 
+; 0001 005E     // Timer/Counter 2 initialization
+; 0001 005F     // Clock source: System Clock
+; 0001 0060     // Clock value: Timer2 Stopped
+; 0001 0061     // Mode: Normal top=0xFF
+; 0001 0062     // OC2 output: Disconnected
+; 0001 0063     ASSR = 0 << AS2;
+;PCODE: $00000050 VOL: 0
+;PCODE: $00000051 VOL: 0
+; 0001 0064     TCCR2 = (0 << PWM2) | (0 << COM21) | (0 << COM20) | (0 << CTC2) | (0 << CS22) | (0 << CS21) | (0 << CS20);
+;PCODE: $00000052 VOL: 0
+;PCODE: $00000053 VOL: 0
+; 0001 0065     TCNT2 = 0x00;
+;PCODE: $00000054 VOL: 0
+;PCODE: $00000055 VOL: 0
+; 0001 0066     OCR2 = 0x00;
+;PCODE: $00000056 VOL: 0
+;PCODE: $00000057 VOL: 0
+; 0001 0067 
+; 0001 0068     // Timer(s)/Counter(s) Interrupt(s) initialization
+; 0001 0069     TIMSK = (0 << OCIE2) | (0 << TOIE2) | (0 << TICIE1) | (0 << OCIE1A) | (0 << OCIE1B) | (0 << TOIE1) | (0 << OCIE0) |  ...
+;PCODE: $00000058 VOL: 0
+;PCODE: $00000059 VOL: 0
+; 0001 006A }
+;PCODE: $0000005A VOL: 0
+;PCODE: $0000005B VOL: 0
+;
+;void init_INTERRUPTS()
+; 0001 006D {
+;PCODE: $0000005C VOL: 0
+;PCODE: $0000005D VOL: 0
+; 0001 006E     // External Interrupt(s) initialization
+; 0001 006F     // INT0: Off
+; 0001 0070     // INT1: Off
+; 0001 0071     // INT2: Off
+; 0001 0072     MCUCR = (0 << ISC11) | (0 << ISC10) | (0 << ISC01) | (0 << ISC00);
+;PCODE: $0000005E VOL: 0
+;PCODE: $0000005F VOL: 0
+; 0001 0073     MCUCSR = (0 << ISC2);
+;PCODE: $00000060 VOL: 0
+;PCODE: $00000061 VOL: 0
+; 0001 0074 }
+;PCODE: $00000062 VOL: 0
+;PCODE: $00000063 VOL: 0
+;
+;void init_USART()
+; 0001 0077 {
+;PCODE: $00000064 VOL: 0
+;PCODE: $00000065 VOL: 0
+; 0001 0078     // USART initialization
+; 0001 0079     // Communication Parameters: 8 Data, 1 Stop, No Parity
+; 0001 007A     // USART Receiver: On
+; 0001 007B     // USART Transmitter: On
+; 0001 007C     // USART Mode: Asynchronous
+; 0001 007D     // USART Baud Rate: 9600
+; 0001 007E     UCSRA = (0 << RXC) | (0 << TXC) | (0 << UDRE) | (0 << FE) | (0 << DOR) | (0 << UPE) | (0 << U2X) | (0 << MPCM);
+;PCODE: $00000066 VOL: 0
+;PCODE: $00000067 VOL: 0
+; 0001 007F     UCSRB = (1 << RXCIE) | (1 << TXCIE) | (0 << UDRIE) | (1 << RXEN) | (1 << TXEN) | (0 << UCSZ2) | (0 << RXB8) | (0 <<  ...
+;PCODE: $00000068 VOL: 0
+;PCODE: $00000069 VOL: 0
+; 0001 0080     UCSRC = (1 << URSEL) | (0 << UMSEL) | (0 << UPM1) | (0 << UPM0) | (0 << USBS) | (1 << UCSZ1) | (1 << UCSZ0) | (0 <<  ...
+;PCODE: $0000006A VOL: 0
+;PCODE: $0000006B VOL: 0
+; 0001 0081     UBRRH = 0x00;
+;PCODE: $0000006C VOL: 0
+;PCODE: $0000006D VOL: 0
+; 0001 0082     UBRRL = 0x33;
+;PCODE: $0000006E VOL: 0
+;PCODE: $0000006F VOL: 0
+; 0001 0083 }
+;PCODE: $00000070 VOL: 0
+;PCODE: $00000071 VOL: 0
+;
+;void init_ANALOG()
+; 0001 0086 {
+;PCODE: $00000072 VOL: 0
+;PCODE: $00000073 VOL: 0
+; 0001 0087     // Analog Comparator initialization
+; 0001 0088     // Analog Comparator: Off
+; 0001 0089     // The Analog Comparator's positive input is
+; 0001 008A     // connected to the AIN0 pin
+; 0001 008B     // The Analog Comparator's negative input is
+; 0001 008C     // connected to the AIN1 pin
+; 0001 008D     ACSR = (1 << ACD) | (0 << ACBG) | (0 << ACO) | (0 << ACI) | (0 << ACIE) | (0 << ACIC) | (0 << ACIS1) | (0 << ACIS0);
+;PCODE: $00000074 VOL: 0
+;PCODE: $00000075 VOL: 0
+; 0001 008E     SFIOR = (0 << ACME);
+;PCODE: $00000076 VOL: 0
+;PCODE: $00000077 VOL: 0
+; 0001 008F }
+;PCODE: $00000078 VOL: 0
+;PCODE: $00000079 VOL: 0
+;
+;void init_ADC()
+; 0001 0092 {
+;PCODE: $0000007A VOL: 0
+;PCODE: $0000007B VOL: 0
+; 0001 0093     // ADC initialization
+; 0001 0094     // ADC disabled
+; 0001 0095     ADCSRA = (0 << ADEN) | (0 << ADSC) | (0 << ADATE) | (0 << ADIF) | (0 << ADIE) | (0 << ADPS2) | (0 << ADPS1) | (0 <<  ...
+;PCODE: $0000007C VOL: 0
+;PCODE: $0000007D VOL: 0
+; 0001 0096 }
+;PCODE: $0000007E VOL: 0
+;PCODE: $0000007F VOL: 0
+;
+;void init_SPI()
+; 0001 0099 {
+;PCODE: $00000080 VOL: 0
+;PCODE: $00000081 VOL: 0
+; 0001 009A     // SPI initialization
+; 0001 009B     // SPI disabled
+; 0001 009C     SPCR = (0 << SPIE) | (0 << SPE) | (0 << DORD) | (0 << MSTR) | (0 << CPOL) | (0 << CPHA) | (0 << SPR1) | (0 << SPR0);
+;PCODE: $00000082 VOL: 0
+;PCODE: $00000083 VOL: 0
+; 0001 009D }
+;PCODE: $00000084 VOL: 0
+;PCODE: $00000085 VOL: 0
+;
+;void init_TWI()
+; 0001 00A0 {
+;PCODE: $00000086 VOL: 0
+;PCODE: $00000087 VOL: 0
+; 0001 00A1     // TWI initialization
+; 0001 00A2     // TWI disabled
+; 0001 00A3     TWCR = (0 << TWEA) | (0 << TWSTA) | (0 << TWSTO) | (0 << TWEN) | (0 << TWIE);
+;PCODE: $00000088 VOL: 0
+;PCODE: $00000089 VOL: 0
+; 0001 00A4 }
+;PCODE: $0000008A VOL: 0
+;PCODE: $0000008B VOL: 0

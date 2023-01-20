@@ -1,0 +1,12 @@
+VERSION:3 SOURCE_TIMESTAMP:559A680C
+NODE:I LEVEL:0 LINE:1 "C:\Users\Win 10\Desktop\university\term7\micro Lab\my_answers\Lab7_hadis_ghafouri_9825413\codevision\project1\Source\headers.h"
+NODE:I LEVEL:0 LINE:2 "C:\Users\Win 10\Desktop\university\term7\micro Lab\my_answers\Lab7_hadis_ghafouri_9825413\codevision\project1\Source\initial_configs.h"
+NODE:F LEVEL:0 LINE:4 "init_configs(void)"
+NODE:F LEVEL:0 LINE:16 "init_PORTS(void)"
+NODE:F LEVEL:0 LINE:43 "init_TIMERS(void)"
+NODE:F LEVEL:0 LINE:91 "init_INTERRUPTS(void)"
+NODE:F LEVEL:0 LINE:101 "init_USART(void)"
+NODE:F LEVEL:0 LINE:116 "init_ANALOG(void)"
+NODE:F LEVEL:0 LINE:128 "init_ADC(void)"
+NODE:F LEVEL:0 LINE:135 "init_SPI(void)"
+NODE:F LEVEL:0 LINE:142 "init_TWI(void)"

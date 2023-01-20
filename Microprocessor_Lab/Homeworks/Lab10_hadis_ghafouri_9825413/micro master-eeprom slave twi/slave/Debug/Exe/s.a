@@ -1,0 +1,277 @@
+;/*******************************************************
+;This program was created by the
+;CodeWizardAVR V3.12 Advanced
+;Automatic Program Generator
+;© Copyright 1998-2014 Pavel Haiduc, HP InfoTech s.r.l.
+;http://www.hpinfotech.com
+;
+;Project :
+;Version :
+;Date    : 11/22/2021
+;Author  :
+;Company :
+;Comments:
+;
+;
+;Chip type               : ATmega16
+;Program type            : Application
+;AVR Core Clock frequency: 8.000000 MHz
+;Memory model            : Small
+;External RAM size       : 0
+;Data Stack size         : 256
+;*******************************************************/
+;
+;#include <mega16.h>
+;PCODE: $00000000 VOL: 0
+	#ifndef __SLEEP_DEFINED__
+;PCODE: $00000001 VOL: 0
+	#define __SLEEP_DEFINED__
+;PCODE: $00000002 VOL: 0
+	.EQU __se_bit=0x40
+;PCODE: $00000003 VOL: 0
+	.EQU __sm_mask=0xB0
+;PCODE: $00000004 VOL: 0
+	.EQU __sm_powerdown=0x20
+;PCODE: $00000005 VOL: 0
+	.EQU __sm_powersave=0x30
+;PCODE: $00000006 VOL: 0
+	.EQU __sm_standby=0xA0
+;PCODE: $00000007 VOL: 0
+	.EQU __sm_ext_standby=0xB0
+;PCODE: $00000008 VOL: 0
+	.EQU __sm_adc_noise_red=0x10
+;PCODE: $00000009 VOL: 0
+	.SET power_ctrl_reg=mcucr
+;PCODE: $0000000A VOL: 0
+	#endif
+;PCODE: $0000000B VOL: 0
+;PCODE: $0000000C VOL: 0
+;
+;// Declare your global variables here
+;
+;// TWI functions
+;#include <twi.h>
+;#include <delay.h>
+;
+;// TWI Slave receive buffer
+;#define TWI_RX_BUFFER_SIZE 10
+;unsigned char twi_rx_buffer[TWI_RX_BUFFER_SIZE];
+;
+;// TWI Slave transmit buffer
+;#define TWI_TX_BUFFER_SIZE 10
+;unsigned char twi_tx_buffer[TWI_TX_BUFFER_SIZE];
+;
+;// TWI Slave receive handler
+;// This handler is called everytime a byte
+;// is received by the TWI slave
+;bool twi_rx_handler(bool rx_complete)
+; 0000 002C {
+
+	.CSEG
+;PCODE: $0000000D VOL: 0
+;PCODE: $0000000E VOL: 0
+; 0000 002D if (twi_result==TWI_RES_OK)
+;PCODE: $0000000F VOL: 0
+;	rx_complete -> Y+0
+;PCODE: $00000010 VOL: 0
+;PCODE: $00000011 VOL: 0
+;PCODE: $00000012 VOL: 0
+; 0000 002E    {
+; 0000 002F    // A data byte was received without error
+; 0000 0030    // and it was stored at twi_rx_buffer[twi_rx_index]
+; 0000 0031    // Place your code here to process the received byte
+; 0000 0032    // Note: processing must be VERY FAST, otherwise
+; 0000 0033    // it is better to process the received data when
+; 0000 0034    // all communication with the master has finished
+; 0000 0035 
+; 0000 0036    }
+; 0000 0037 else
+;PCODE: $00000013 VOL: 0
+;PCODE: $00000014 VOL: 0
+; 0000 0038    {
+; 0000 0039    // Receive error
+; 0000 003A    // Place your code here to process the error
+; 0000 003B 
+; 0000 003C    return false; // Stop further reception
+;PCODE: $00000015 VOL: 0
+;PCODE: $00000016 VOL: 0
+;PCODE: $00000017 VOL: 0
+; 0000 003D    }
+;PCODE: $00000018 VOL: 0
+; 0000 003E 
+; 0000 003F // The TWI master has finished transmitting data?
+; 0000 0040 if (rx_complete) return false; // Yes, no more bytes to receive
+;PCODE: $00000019 VOL: 0
+;PCODE: $0000001A VOL: 0
+;PCODE: $0000001B VOL: 0
+;PCODE: $0000001C VOL: 0
+;PCODE: $0000001D VOL: 0
+;PCODE: $0000001E VOL: 0
+; 0000 0041 
+; 0000 0042 // Signal to the TWI master that the TWI slave
+; 0000 0043 // is ready to accept more data, as long as
+; 0000 0044 // there is enough space in the receive buffer
+; 0000 0045 return (twi_rx_index<sizeof(twi_rx_buffer));
+;PCODE: $0000001F VOL: 0
+;PCODE: $00000020 VOL: 0
+;PCODE: $00000021 VOL: 0
+;PCODE: $00000022 VOL: 0
+;PCODE: $00000023 VOL: 0
+;PCODE: $00000024 VOL: 0
+; 0000 0046 }
+;PCODE: $00000025 VOL: 0
+;
+;// TWI Slave transmission handler
+;// This handler is called for the first time when the
+;// transmission from the TWI slave to the master
+;// is about to begin, returning the number of bytes
+;// that need to be transmitted
+;// The second time the handler is called when the
+;// transmission has finished
+;// In this case it must return 0
+;unsigned char twi_tx_handler(bool tx_complete)
+; 0000 0051 {
+;PCODE: $00000026 VOL: 0
+;PCODE: $00000027 VOL: 0
+; 0000 0052 if (tx_complete==false)
+;PCODE: $00000028 VOL: 0
+;	tx_complete -> Y+0
+;PCODE: $00000029 VOL: 0
+;PCODE: $0000002A VOL: 0
+;PCODE: $0000002B VOL: 0
+; 0000 0053    {
+; 0000 0054    // Transmission from slave to master is about to start
+; 0000 0055    // Return the number of bytes to transmit
+; 0000 0056    return sizeof (twi_tx_buffer);
+;PCODE: $0000002C VOL: 0
+;PCODE: $0000002D VOL: 0
+;PCODE: $0000002E VOL: 0
+; 0000 0057    }
+; 0000 0058 
+; 0000 0059 // Transmission from slave to master has finished
+; 0000 005A // Place code here to eventually process data from
+; 0000 005B // the twi_rx_buffer, if it wasn't yet processed
+; 0000 005C // in the twi_rx_handler
+; 0000 005D 
+; 0000 005E // No more bytes to send in this transaction
+; 0000 005F return 0;
+;PCODE: $0000002F VOL: 0
+;PCODE: $00000030 VOL: 0
+;PCODE: $00000031 VOL: 0
+;PCODE: $00000032 VOL: 0
+; 0000 0060 }
+;PCODE: $00000033 VOL: 0
+;
+;void main(void)
+; 0000 0063 {
+;PCODE: $00000034 VOL: 0
+; 0000 0064 // Declare your local variables here
+; 0000 0065  char i;
+; 0000 0066 // Input/Output Ports initialization
+; 0000 0067 // Port A initialization
+; 0000 0068 // Function: Bit7=In Bit6=In Bit5=In Bit4=In Bit3=In Bit2=In Bit1=In Bit0=In
+; 0000 0069 DDRA=(0<<DDA7) | (0<<DDA6) | (0<<DDA5) | (0<<DDA4) | (0<<DDA3) | (0<<DDA2) | (0<<DDA1) | (0<<DDA0);
+;	i -> R17
+;PCODE: $00000035 VOL: 0
+;PCODE: $00000036 VOL: 0
+; 0000 006A // State: Bit7=T Bit6=T Bit5=T Bit4=T Bit3=T Bit2=T Bit1=T Bit0=T
+; 0000 006B PORTA=(0<<PORTA7) | (0<<PORTA6) | (0<<PORTA5) | (0<<PORTA4) | (0<<PORTA3) | (0<<PORTA2) | (0<<PORTA1) | (0<<PORTA0);
+;PCODE: $00000037 VOL: 0
+;PCODE: $00000038 VOL: 0
+; 0000 006C 
+; 0000 006D // Port B initialization
+; 0000 006E // Function: Bit7=In Bit6=In Bit5=In Bit4=In Bit3=In Bit2=In Bit1=In Bit0=In
+; 0000 006F DDRB=(0<<DDB7) | (0<<DDB6) | (0<<DDB5) | (0<<DDB4) | (0<<DDB3) | (0<<DDB2) | (0<<DDB1) | (0<<DDB0);
+;PCODE: $00000039 VOL: 0
+;PCODE: $0000003A VOL: 0
+; 0000 0070 // State: Bit7=T Bit6=T Bit5=T Bit4=T Bit3=T Bit2=T Bit1=T Bit0=T
+; 0000 0071 PORTB=(0<<PORTB7) | (0<<PORTB6) | (0<<PORTB5) | (0<<PORTB4) | (0<<PORTB3) | (0<<PORTB2) | (0<<PORTB1) | (0<<PORTB0);
+;PCODE: $0000003B VOL: 0
+;PCODE: $0000003C VOL: 0
+; 0000 0072 
+; 0000 0073 // Port C initialization
+; 0000 0074 // Function: Bit7=In Bit6=In Bit5=In Bit4=In Bit3=In Bit2=In Bit1=In Bit0=In
+; 0000 0075 DDRC=(0<<DDC7) | (0<<DDC6) | (0<<DDC5) | (0<<DDC4) | (0<<DDC3) | (0<<DDC2) | (0<<DDC1) | (0<<DDC0);
+;PCODE: $0000003D VOL: 0
+;PCODE: $0000003E VOL: 0
+; 0000 0076 // State: Bit7=T Bit6=T Bit5=T Bit4=T Bit3=T Bit2=T Bit1=T Bit0=T
+; 0000 0077 PORTC=(0<<PORTC7) | (0<<PORTC6) | (0<<PORTC5) | (0<<PORTC4) | (0<<PORTC3) | (0<<PORTC2) | (0<<PORTC1) | (0<<PORTC0);
+;PCODE: $0000003F VOL: 0
+;PCODE: $00000040 VOL: 0
+; 0000 0078 
+; 0000 0079 // Port D initialization
+; 0000 007A // Function: Bit7=In Bit6=In Bit5=In Bit4=In Bit3=In Bit2=In Bit1=In Bit0=In
+; 0000 007B DDRD=(0<<DDD7) | (0<<DDD6) | (0<<DDD5) | (0<<DDD4) | (0<<DDD3) | (0<<DDD2) | (0<<DDD1) | (0<<DDD0);
+;PCODE: $00000041 VOL: 0
+;PCODE: $00000042 VOL: 0
+; 0000 007C // State: Bit7=T Bit6=T Bit5=T Bit4=T Bit3=T Bit2=T Bit1=T Bit0=T
+; 0000 007D PORTD=(0<<PORTD7) | (0<<PORTD6) | (0<<PORTD5) | (0<<PORTD4) | (0<<PORTD3) | (0<<PORTD2) | (0<<PORTD1) | (0<<PORTD0);
+;PCODE: $00000043 VOL: 0
+;PCODE: $00000044 VOL: 0
+; 0000 007E 
+; 0000 007F // TWI initialization
+; 0000 0080 // Mode: TWI Slave
+; 0000 0081 // Match Any Slave Address: Off
+; 0000 0082 // I2C Bus Slave Address: 0x60
+; 0000 0083 
+; 0000 0084 
+; 0000 0085 
+; 0000 0086  twi_tx_buffer[0]=0x60;
+;PCODE: $00000045 VOL: 0
+;PCODE: $00000046 VOL: 0
+; 0000 0087   twi_tx_buffer[1]=0x20;
+;PCODE: $00000047 VOL: 0
+;PCODE: $00000048 VOL: 0
+;PCODE: $00000049 VOL: 0
+; 0000 0088    twi_tx_buffer[2]=0x20;
+;PCODE: $0000004A VOL: 0
+;PCODE: $0000004B VOL: 0
+;PCODE: $0000004C VOL: 0
+; 0000 0089     twi_tx_buffer[3]=0x20;
+;PCODE: $0000004D VOL: 0
+;PCODE: $0000004E VOL: 0
+;PCODE: $0000004F VOL: 0
+; 0000 008A      twi_tx_buffer[4]=0x20;
+;PCODE: $00000050 VOL: 0
+;PCODE: $00000051 VOL: 0
+;PCODE: $00000052 VOL: 0
+; 0000 008B       twi_tx_buffer[5]=0x20;
+;PCODE: $00000053 VOL: 0
+;PCODE: $00000054 VOL: 0
+;PCODE: $00000055 VOL: 0
+; 0000 008C 
+; 0000 008D //twi_slave_init(false,0x60,twi_rx_buffer,sizeof(twi_rx_buffer),twi_tx_buffer,twi_rx_handler,twi_tx_handler);
+; 0000 008E twi_slave_init(false,0x60,0,0,twi_tx_buffer,0,twi_tx_handler);
+;PCODE: $00000056 VOL: 0
+;PCODE: $00000057 VOL: 0
+;PCODE: $00000058 VOL: 0
+;PCODE: $00000059 VOL: 0
+;PCODE: $0000005A VOL: 0
+;PCODE: $0000005B VOL: 0
+;PCODE: $0000005C VOL: 0
+;PCODE: $0000005D VOL: 0
+;PCODE: $0000005E VOL: 0
+;PCODE: $0000005F VOL: 0
+;PCODE: $00000060 VOL: 0
+;PCODE: $00000061 VOL: 0
+;PCODE: $00000062 VOL: 0
+;PCODE: $00000063 VOL: 0
+; 0000 008F 
+; 0000 0090 // Global enable interrupts
+; 0000 0091 #asm("sei")
+;PCODE: $00000064 VOL: 0
+	sei
+;PCODE: $00000065 VOL: 0
+; 0000 0092 
+; 0000 0093 while (1)
+;PCODE: $00000066 VOL: 0
+; 0000 0094       {
+; 0000 0095       // Place your code here
+; 0000 0096 
+; 0000 0097       }
+;PCODE: $00000067 VOL: 0
+;PCODE: $00000068 VOL: 0
+; 0000 0098 }
+;PCODE: $00000069 VOL: 0
+;PCODE: $0000006A VOL: 0
+;PCODE: $0000006B VOL: 0

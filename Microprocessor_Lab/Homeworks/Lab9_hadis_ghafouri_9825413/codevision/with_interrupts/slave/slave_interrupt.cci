@@ -1,0 +1,7 @@
+VERSION:3 SOURCE_TIMESTAMP:559F453A
+NODE:I LEVEL:0 LINE:24 "C:\cvavr\inc\mega16.h"
+NODE:I LEVEL:0 LINE:27 "C:\cvavr\inc\alcd.h"
+NODE:I LEVEL:0 LINE:28 "C:\cvavr\inc\stdio.h"
+NODE:F LEVEL:0 LINE:33 "spi_isr(void)"
+NODE:V LEVEL:0 LINE:36 "count_S0000000000 -> RAM:????"
+NODE:F LEVEL:0 LINE:52 "main(void)"
