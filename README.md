@@ -35,5 +35,13 @@ All my projects, homeworks, hand writings, course slides and anything I have lea
   - <a href="https://github.com/hadis98/IUT/tree/main/DataBase_Lab">Database Lab</a>
   
  - ## **Summer 2022** ![Term](https://img.shields.io/badge/Solar--Hijri-Tir--1401-red)
-    - <a href="https://github.com/hadis98/IUT/tree/main/Internship">Internship</a>     
+    - <a href="https://github.com/hadis98/IUT/tree/main/Internship">Internship</a>    
+ 
+- ## **Fall Semester 2022** ![Term](https://img.shields.io/badge/Solar--Hijri-Mehr--1401-blueviolet)  
+  - <a href="https://github.com/hadis98/IUT/tree/main/Artificial_intelligence">Artificial Intelligence</a>        
+  - <a href="https://github.com/hadis98/IUT/tree/main/Economy">Economy</a>  
+  - <a href="https://github.com/hadis98/IUT/tree/main/Game_Theory">Game Theory</a>  
+  - <a href="https://github.com/hadis98/IUT/tree/main/Microprocessor_Lab">Microprocessor Lab</a>
+  - <a href="https://github.com/hadis98/IUT/tree/main/Numerical_Analysis">Numerical Analysis</a>  
+  - <a href="https://github.com/hadis98/IUT/tree/main/Software_Engineering">Software Engineering</a>  
 ---
