@@ -45,7 +45,7 @@ All my projects, homework, handwriting, course slides, and anything I have learn
   - <a href="https://github.com/hadis98/IUT/tree/main/Numerical_Analysis">Numerical Analysis</a>  
   - <a href="https://github.com/hadis98/IUT/tree/main/Software_Engineering">Software Engineering</a>
   
-- ## **Fall Semester 2022** ![Term](https://img.shields.io/badge/Solar--Hijri-Bahman--1401-blue)
+- ## **Spring Semester 2023** ![Term](https://img.shields.io/badge/Solar--Hijri-Bahman--1401-blue)
   - <a href="https://github.com/hadis98/IUT/tree/main/Data_Mining">Data Mining</a>
   - <a href="https://github.com/hadis98/IUT/tree/main/Software_Engineering2">Software Engineering2</a>
   - <a href="https://github.com/hadis98/IUT/tree/main/Software_Test">Software Test</a>
