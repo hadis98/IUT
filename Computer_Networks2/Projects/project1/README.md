@@ -36,39 +36,39 @@
 * **Minimal Topology**
     - It is the most basic topology with two hosts and one switch.
     - To run minimal topology we use the **Sudo mn --topo minimal** command in terminal.
-        - <img width="100%" style="max-width:500px" src="https://i.postimg.cc/7hHt6Hjz/image.png"/>
+        - <img width="100%" style="max-width:500px;" src="https://i.postimg.cc/7hHt6Hjz/image.png"/>
 * **Single Topology**
     - It is the simple topology with one switch and N hosts.
     - To run this topology we use the **Sudo mn --topo single,3** command in terminal.    
-        - <img width="100%" style="max-width:500px" src="https://i.postimg.cc/DwB8SnmT/image.png"/>
+        - <img width="100%" style="max-width:500px;" src="https://i.postimg.cc/DwB8SnmT/image.png"/>
 
     - execution of **nodes** command
-        - <img width="100%" style="max-width:500px" src="https://i.postimg.cc/9fLFQp8F/image.png"/>
+        - <img width="100%" style="max-width:500px;" src="https://i.postimg.cc/9fLFQp8F/image.png"/>
 
     - execution of **net** command
-        - <img width="100%" style="max-width:500px" src="https://i.postimg.cc/pdQkhs38/image.png"/>
+        - <img width="100%" style="max-width: 500px;" src="https://i.postimg.cc/pdQkhs38/image.png"/>
 
     - execution of **dump** command
-        - <img width="100%" style="max-width:500px" src="https://i.postimg.cc/PrzmMCSs/image.png"/>
+        - <img width="100%" style="max-width:500px;" src="https://i.postimg.cc/PrzmMCSs/image.png"/>
     
     - network in **topology visualizer**
-        - <img width="100%" style="max-width:500px" src="https://i.postimg.cc/9QDggPKw/image.png"/>
+        - <img width="100%" style="max-width:500px;" src="https://i.postimg.cc/9QDggPKw/image.png"/>
 * **Reversed Topology**
     - It is similar to the single connection but order of connection between hosts and switch is reversed.
     - To run this topology we use the **Sudo mn --topo reversed,3** command in terminal.
-        - <img width="100%" style="max-width:500px" src="https://i.postimg.cc/RZgt5ML8/image.png"/>
+        - <img width="100%" style="max-width:500px;" src="https://i.postimg.cc/RZgt5ML8/image.png"/>
     
     - network in **topology visualizer**
-        - <img width="100%" style="max-width:500px" src="https://i.postimg.cc/mrsH0Bhf/image.png"/>
+        - <img width="100%" style="max-width:500px;" src="https://i.postimg.cc/mrsH0Bhf/image.png"/>
 * **Linear Topology**
     - It is the connection between the N hosts and N switches.
     - To run this topology we use the **Sudo mn --topo linear,3** command in terminal.
-        - <img width="100%" style="max-width:500px" src="https://i.postimg.cc/m2bhbvkG/image.png"/>
+        - <img width="100%" style="max-width:500px;" src="https://i.postimg.cc/m2bhbvkG/image.png"/>
     - executing **links** and **dump** commands
-    - <img width="100%" style="max-width:500px" src="https://i.postimg.cc/2y8JGsnn/image.png"/>
+    - <img width="100%" style="max-width:500px;" src="https://i.postimg.cc/2y8JGsnn/image.png"/>
 
     - network in **topology visualizer**
-        - <img width="100%" style="max-width:500px" src="https://i.postimg.cc/bv5sqPww/image.png"/>
+        - <img width="100%" style="max-width:500px;" src="https://i.postimg.cc/bv5sqPww/image.png"/>
 * **Tree Topology**
     - A tree topology is a multilevel topology with N levels and two hosts per switch.
     - To run this topology we use the **Sudo mn –-topo tree,3** command in terminal.
