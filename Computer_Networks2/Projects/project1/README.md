@@ -6,12 +6,14 @@
 - Worked with [Mininet Topology Visualizer](http://demo.spear.narmox.com/app/?apiurl=demo#!/mininet) which is an amzaing tool for visualizing the network topology.
 
 ### What Is Mininet
-- Mininet is a tool for emulating a network of virtual hosts, switches, controllers, and links on a single machine.
-- It is mainly used for developing and testing software-defined networks (SDN) or network function virtualization (NFV) applications. 
-- Mininet hosts run standard Linux network software, and its switches support OpenFlow for highly flexible custom routing and Software-Defined Networking.
+- It is a network emulator which creates a network of virtual hosts, switches, controllers, and links.
+- It is mainly used for developing and testing software-defined networks (SDN).
+- Provides a simple and inexpensive network testbed for developing OpenFlow applications.
+- Enables complex topology testing, without the need to wire up a physical network
+- Supports arbitrary custom topologies, and includes a basic set of parametrized topologies
 - Mininet allows you to create and experiment with different network topologies and scenarios without the need for physical hardware. 
-- You can also use Mininet to learn about SDN and OpenFlow concepts and protocols.
-- Mininet is based on Command Line Interface (CLI). 
+- Includes a CLI that is topology-aware and OpenFlow-aware, for debugging or running network-wide tests.
+- It Provides a straightforward and extensible Python API for network creation and experimentation
 
 ### Commands in Mininet
 - **Mininet>help**
@@ -72,6 +74,12 @@
 * **Tree Topology**
     - A tree topology is a multilevel topology with N levels and two hosts per switch.
     - To run this topology we use the **Sudo mn –-topo tree,3** command in terminal.
+
+
+## References
+- [mininet](https://mininet.org/overview/)
+- [Experimentation with Mininet Topologies](https://indjst.org/download-article.php?Article_Unique_Id=INDJST7990&Full_Text_Pdf_Download=True#:~:text=In%20mininet%20we%20have%20various,%2C%20linear%2C%20tree%20topology%20etc.&text=We%20have%20run%20various%20topologies,two%20hosts%20and%20one%20switch.)
+
 ## License
 - This project is licensed under [MIT License]. 
 - You can use it for personal or educational purposes as long as you give credit to its author.
