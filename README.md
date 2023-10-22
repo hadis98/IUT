@@ -1,6 +1,6 @@
 # <a href="https://iut.ac.ir/">IUT </a> <img src="./IUT_logo.jpg" align="center" width="60"  title="Isfahan University Of Technology"> 
 
-All my projects, homeworks, hand writings, course slides and anything I have learned and done during my undergraduate study at Isfahan University of Technology.
+All my projects, homework, handwriting, course slides, and anything I have learned and done during my undergraduate study at the Isfahan University of Technology.
 
 
 # Courses
@@ -43,5 +43,12 @@ All my projects, homeworks, hand writings, course slides and anything I have lea
   - <a href="https://github.com/hadis98/IUT/tree/main/Game_Theory">Game Theory</a>  
   - <a href="https://github.com/hadis98/IUT/tree/main/Microprocessor_Lab">Microprocessor Lab</a>
   - <a href="https://github.com/hadis98/IUT/tree/main/Numerical_Analysis">Numerical Analysis</a>  
-  - <a href="https://github.com/hadis98/IUT/tree/main/Software_Engineering">Software Engineering</a>  
+  - <a href="https://github.com/hadis98/IUT/tree/main/Software_Engineering">Software Engineering</a>
+  
+- ## **Spring Semester 2023** ![Term](https://img.shields.io/badge/Solar--Hijri-Bahman--1401-blue)
+  - <a href="https://github.com/hadis98/IUT/tree/main/Data_Mining">Data Mining</a>
+  - <a href="https://github.com/hadis98/IUT/tree/main/Software_Engineering2">Software Engineering2</a>
+  - <a href="https://github.com/hadis98/IUT/tree/main/Software_Test">Software Test</a>
+  - <a href="https://github.com/hadis98/IUT/tree/main/Principles_Of_Management_And_Organization_Theory">Principles Of Management And Organization Theory</a>
+  - <a href="https://github.com/hadis98/IUT/tree/main/Cryptography">Cryptography</a> 
 ---
