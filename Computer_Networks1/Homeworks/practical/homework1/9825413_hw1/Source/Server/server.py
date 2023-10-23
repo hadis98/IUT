@@ -64,10 +64,8 @@ def changeDir(conn,data):
 def downloadFile(conn,data):
     found =0
     path = os.getcwd()
-    fileName = data[5:]
-    print('fileName: '+fileName)
-    if 'main' in path:
-        print('fileName: '+fileName)
+    fileName = data[5:]    
+    if 'main' in path:        
         items = os.scandir()
         for item in items:
             print(item.name)

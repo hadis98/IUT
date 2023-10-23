@@ -119,5 +119,5 @@ The following figure shows the comparison between the SDN architecture and the t
 - You can use it for personal or educational purposes as long as you give credit to its author.
 
 ## Author
-- This project was created by Hadis Ghafouri as first project for Computer Network2 course at IUT.
+- This project was created by Hadis Ghafouri as third project for Computer Network2 course at IUT.
 - You can contact me by email at hadisghafouri@gmail.com.
