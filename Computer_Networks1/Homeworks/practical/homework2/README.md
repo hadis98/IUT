@@ -291,5 +291,5 @@
 
 ## Author
 
-- This project was created by Hadis Ghafouri as first project for Computer Networks1 course at IUT.
-- You can contact me by email at hadisghafouri@gmail.com.
+- This project was created by Hadis Ghafouri as second project of Computer Networks1 course at IUT.
+- You can contact me by email at hadisghafouri98@gmail.com.
