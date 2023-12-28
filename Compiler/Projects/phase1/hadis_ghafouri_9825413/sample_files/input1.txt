@@ -1,0 +1,26 @@
+// example of declaring variables
+int x,y,z;
+x = 5;
+int test=2;
+boolean flag=1<=2;
+
+// example of if-else condition
+if(flag==true){
+	print("the flag is true");
+}else{
+	flag = !flag;
+} 
+
+// example of loop
+for(int i=0;i<5;i+=2)
+	print("the index is: ",i);
+
+y ='c'+ 0x23
+z= '#' 
+x = '/'
+// testing the case sensitivity of analyzer
+is if==IF ?
+is false!=False ?
+
+// testing the specific conditions defined as requirements
+'//' '''  '"' '\' '\\' '/"' '\"' '\n' '\t'

@@ -159,6 +159,7 @@
 
 %start program
 
+
 %%
 program : TOKEN_CLASS TOKEN_PROGRAMCLASS TOKEN_LCB {currentScope += " program"; } decl_fields  decl_methods  TOKEN_RCB {currentScope.erase(currentScope.size()-(strlen("program")+1),strlen("program")+1);};
 decl_fields :decl_fields decl_field

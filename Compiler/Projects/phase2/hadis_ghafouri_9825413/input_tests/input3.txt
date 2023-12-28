@@ -1,0 +1,4 @@
+class Program {
+int globalVar
+void main(){ }
+}

@@ -1,0 +1,20 @@
+class Program {
+  int var, a[10];
+  boolean is_greater_than_zero(int a) {
+    return 0;
+  }
+  void main() {
+    var = 0;
+    for i = 0, 10 {
+      var += 1;
+    }
+    if(var == 1){
+      a[0] = 1;
+    }
+        else{
+      a[7] = 0;
+    }
+    is_greater_than_zero(5);
+  }
+}
+

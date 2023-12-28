@@ -1,0 +1,98 @@
+*************************************** PREORDER TRAVERSAL ***************************************
+
+
+<program> TOKEN_CLASS TOKEN_PROGRAMCLASS TOKEN_LCB <decl_fields> <decl_methods> <decl_method> <type> TOKEN_INTTYPE <method_id> TOKEN_ID TOKEN_LP <method_args> <method_arg> <type> TOKEN_INTTYPE TOKEN_ID TOKEN_COMMA <method_arg> <type> TOKEN_INTTYPE TOKEN_ID TOKEN_RP <block> TOKEN_LCB <declare_vars> <statments> <statment> <stmt_return> TOKEN_RETURN <location> <location> <location> TOKEN_ID TOKEN_PLUS <location> <location> TOKEN_ID TOKEN_SEMICOLON <statments> TOKEN_RCB <decl_methods> <decl_method> TOKEN_VOIDTYPE <method_id> TOKEN_MAINFUNC TOKEN_LP <method_args> TOKEN_RP <block> TOKEN_LCB <declare_vars> <declare_var> <type> TOKEN_INTTYPE TOKEN_ID <ids> TOKEN_COMMA TOKEN_ID <ids> TOKEN_SEMICOLON <declare_vars> <statments> <statment> <location> TOKEN_ID TOKEN_ASSIGNOP <location> <literal> TOKEN_DECIMALCONST TOKEN_SEMICOLON <statments> <statment> <method_call> TOKEN_ID TOKEN_LP <call_params> <location> <location> TOKEN_ID TOKEN_RP TOKEN_SEMICOLON <statments> TOKEN_RCB <decl_methods> TOKEN_RCB
+
+
+*************************************************************
+*************************** PRINT PARSE TREE **************************
+********************************************************************
+
+program
+\TOKEN_CLASS
+\TOKEN_PROGRAMCLASS
+\TOKEN_LCB
+\decl_fields
+\decl_methods
+	\decl_method
+		\type
+			\TOKEN_INTTYPE
+		\method_id
+			\TOKEN_ID
+		\TOKEN_LP
+		\method_args
+			\method_arg
+				\type
+					\TOKEN_INTTYPE
+				\TOKEN_ID
+			\TOKEN_COMMA
+			\method_arg
+				\type
+					\TOKEN_INTTYPE
+				\TOKEN_ID
+		\TOKEN_RP
+		\block
+			\TOKEN_LCB
+			\declare_vars
+			\statments
+				\statment
+					\stmt_return
+						\TOKEN_RETURN
+						\location
+							\location
+								\location
+									\TOKEN_ID
+							\TOKEN_PLUS
+							\location
+								\location
+									\TOKEN_ID
+					\TOKEN_SEMICOLON
+				\statments
+			\TOKEN_RCB
+	\decl_methods
+		\decl_method
+			\TOKEN_VOIDTYPE
+			\method_id
+				\TOKEN_MAINFUNC
+			\TOKEN_LP
+			\method_args
+			\TOKEN_RP
+			\block
+				\TOKEN_LCB
+				\declare_vars
+					\declare_var
+						\type
+							\TOKEN_INTTYPE
+						\TOKEN_ID
+						\ids
+							\TOKEN_COMMA
+							\TOKEN_ID
+							\ids
+						\TOKEN_SEMICOLON
+					\declare_vars
+				\statments
+					\statment
+						\location
+							\TOKEN_ID
+						\TOKEN_ASSIGNOP
+						\location
+							\literal
+								\TOKEN_DECIMALCONST
+						\TOKEN_SEMICOLON
+					\statments
+						\statment
+							\method_call
+								\TOKEN_ID
+								\TOKEN_LP
+								\call_params
+									\location
+										\location
+											\TOKEN_ID
+								\TOKEN_RP
+							\TOKEN_SEMICOLON
+						\statments
+				\TOKEN_RCB
+		\decl_methods
+\TOKEN_RCB
+
+Parsing Done Successfully:)

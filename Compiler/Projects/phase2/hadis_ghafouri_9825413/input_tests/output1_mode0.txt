@@ -1,0 +1,97 @@
+*************************************** PREORDER TRAVERSAL ***************************************
+
+
+<program> TOKEN_CLASS class TOKEN_PROGRAMCLASS Program TOKEN_LCB { <decl_fields> <decl_methods> <decl_method> <type> TOKEN_INTTYPE int <method_id> TOKEN_ID add TOKEN_LP ( <method_args> <method_arg> <type> TOKEN_INTTYPE int TOKEN_ID a TOKEN_COMMA , <method_arg> <type> TOKEN_INTTYPE int TOKEN_ID b TOKEN_RP ) <block> TOKEN_LCB { <declare_vars> <statments> <statment> <stmt_return> TOKEN_RETURN return <location> <location> <location> TOKEN_ID a TOKEN_PLUS + <location> <location> TOKEN_ID b TOKEN_SEMICOLON ; <statments> TOKEN_RCB } <decl_methods> <decl_method> TOKEN_VOIDTYPE void <method_id> TOKEN_MAINFUNC main TOKEN_LP ( <method_args> TOKEN_RP ) <block> TOKEN_LCB { <declare_vars> <declare_var> <type> TOKEN_INTTYPE int TOKEN_ID a <ids> TOKEN_COMMA , TOKEN_ID b <ids> TOKEN_SEMICOLON ; <declare_vars> <statments> <statment> <location> TOKEN_ID a TOKEN_ASSIGNOP = <location> <literal> TOKEN_DECIMALCONST 3 TOKEN_SEMICOLON ; <statments> <statment> <method_call> TOKEN_ID add TOKEN_LP ( <call_params> <location> <location> TOKEN_ID a TOKEN_RP ) TOKEN_SEMICOLON ; <statments> TOKEN_RCB } <decl_methods> TOKEN_RCB } 
+
+*************************************************************
+*************************** PRINT PARSE TREE **************************
+********************************************************************
+
+program
+\TOKEN_CLASS class
+\TOKEN_PROGRAMCLASS Program
+\TOKEN_LCB {
+\decl_fields
+\decl_methods
+	\decl_method
+		\type
+			\TOKEN_INTTYPE int
+		\method_id
+			\TOKEN_ID add
+		\TOKEN_LP (
+		\method_args
+			\method_arg
+				\type
+					\TOKEN_INTTYPE int
+				\TOKEN_ID a
+			\TOKEN_COMMA ,
+			\method_arg
+				\type
+					\TOKEN_INTTYPE int
+				\TOKEN_ID b
+		\TOKEN_RP )
+		\block
+			\TOKEN_LCB {
+			\declare_vars
+			\statments
+				\statment
+					\stmt_return
+						\TOKEN_RETURN return
+						\location
+							\location
+								\location
+									\TOKEN_ID a
+							\TOKEN_PLUS +
+							\location
+								\location
+									\TOKEN_ID b
+					\TOKEN_SEMICOLON ;
+				\statments
+			\TOKEN_RCB }
+	\decl_methods
+		\decl_method
+			\TOKEN_VOIDTYPE void
+			\method_id
+				\TOKEN_MAINFUNC main
+			\TOKEN_LP (
+			\method_args
+			\TOKEN_RP )
+			\block
+				\TOKEN_LCB {
+				\declare_vars
+					\declare_var
+						\type
+							\TOKEN_INTTYPE int
+						\TOKEN_ID a
+						\ids
+							\TOKEN_COMMA ,
+							\TOKEN_ID b
+							\ids
+						\TOKEN_SEMICOLON ;
+					\declare_vars
+				\statments
+					\statment
+						\location
+							\TOKEN_ID a
+						\TOKEN_ASSIGNOP =
+						\location
+							\literal
+								\TOKEN_DECIMALCONST 3
+						\TOKEN_SEMICOLON ;
+					\statments
+						\statment
+							\method_call
+								\TOKEN_ID add
+								\TOKEN_LP (
+								\call_params
+									\location
+										\location
+											\TOKEN_ID a
+								\TOKEN_RP )
+							\TOKEN_SEMICOLON ;
+						\statments
+				\TOKEN_RCB }
+		\decl_methods
+\TOKEN_RCB }
+
+Parsing Done Successfully:)

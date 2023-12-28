@@ -1,0 +1,175 @@
+*************************************** PREORDER TRAVERSAL ***************************************
+
+
+<program> TOKEN_CLASS class TOKEN_PROGRAMCLASS Program TOKEN_LCB { <decl_fields> <decl_fields> <decl_field> <type> TOKEN_INTTYPE int <names> <names> <location> TOKEN_ID var TOKEN_COMMA , <location> TOKEN_ID a TOKEN_LB [ <location> <literal> TOKEN_DECIMALCONST 10 TOKEN_RB ] TOKEN_SEMICOLON ; <decl_methods> <decl_method> <type> TOKEN_BOOLEANTYPE boolean <method_id> TOKEN_ID is_greater_than_zero TOKEN_LP ( <method_args> <method_arg> <type> TOKEN_INTTYPE int TOKEN_ID a TOKEN_RP ) <block> TOKEN_LCB { <declare_vars> <statments> <statment> <stmt_return> TOKEN_RETURN return <location> <literal> TOKEN_DECIMALCONST 0 TOKEN_SEMICOLON ; <statments> TOKEN_RCB } <decl_methods> <decl_method> TOKEN_VOIDTYPE void <method_id> TOKEN_MAINFUNC main TOKEN_LP ( <method_args> TOKEN_RP ) <block> TOKEN_LCB { <declare_vars> <statments> <statment> <location> TOKEN_ID var TOKEN_ASSIGNOP = <location> <literal> TOKEN_DECIMALCONST 0 TOKEN_SEMICOLON ; <statments> <statment> <stmt_for> TOKEN_LOOP for TOKEN_ID i TOKEN_ASSIGNOP = <location> <literal> TOKEN_DECIMALCONST 0 TOKEN_COMMA , <location> <literal> TOKEN_DECIMALCONST 10 <block> TOKEN_LCB { <declare_vars> <statments> <statment> <location> TOKEN_ID var TOKEN_ASSIGNOP += <location> <literal> TOKEN_DECIMALCONST 1 TOKEN_SEMICOLON ; <statments> TOKEN_RCB } <statments> <statment> <stmt_if> TOKEN_IFCONDITION if TOKEN_LP ( <location> <location> <location> TOKEN_ID var TOKEN_EQUALITYOP == <location> <literal> TOKEN_DECIMALCONST 1 TOKEN_PR ) <block> TOKEN_LCB { <declare_vars> <statments> <statment> <location> TOKEN_ID a TOKEN_LB [ <location> <literal> TOKEN_DECIMALCONST 0 TOKEN_RB ] TOKEN_ASSIGNOP = <location> <literal> TOKEN_DECIMALCONST 1 TOKEN_SEMICOLON ; <statments> TOKEN_RCB } <optional_else> TOKEN_ELSECONDITION else <block> TOKEN_LCB { <declare_vars> <statments> <statment> <location> TOKEN_ID a TOKEN_LB [ <location> <literal> TOKEN_DECIMALCONST 7 TOKEN_RB ] TOKEN_ASSIGNOP = <location> <literal> TOKEN_DECIMALCONST 0 TOKEN_SEMICOLON ; <statments> TOKEN_RCB } <statments> <statment> <method_call> TOKEN_ID is_greater_than_zero TOKEN_LP ( <call_params> <location> <literal> TOKEN_DECIMALCONST 5 TOKEN_RP ) TOKEN_SEMICOLON ; <statments> TOKEN_RCB } <decl_methods> TOKEN_RCB } 
+
+*************************************************************
+*************************** PRINT PARSE TREE **************************
+********************************************************************
+
+program
+\TOKEN_CLASS class
+\TOKEN_PROGRAMCLASS Program
+\TOKEN_LCB {
+\decl_fields
+	\decl_fields
+	\decl_field
+		\type
+			\TOKEN_INTTYPE int
+		\names
+			\names
+				\location
+					\TOKEN_ID var
+			\TOKEN_COMMA ,
+			\location
+				\TOKEN_ID a
+				\TOKEN_LB [
+				\location
+					\literal
+						\TOKEN_DECIMALCONST 10
+				\TOKEN_RB ]
+		\TOKEN_SEMICOLON ;
+\decl_methods
+	\decl_method
+		\type
+			\TOKEN_BOOLEANTYPE boolean
+		\method_id
+			\TOKEN_ID is_greater_than_zero
+		\TOKEN_LP (
+		\method_args
+			\method_arg
+				\type
+					\TOKEN_INTTYPE int
+				\TOKEN_ID a
+		\TOKEN_RP )
+		\block
+			\TOKEN_LCB {
+			\declare_vars
+			\statments
+				\statment
+					\stmt_return
+						\TOKEN_RETURN return
+						\location
+							\literal
+								\TOKEN_DECIMALCONST 0
+					\TOKEN_SEMICOLON ;
+				\statments
+			\TOKEN_RCB }
+	\decl_methods
+		\decl_method
+			\TOKEN_VOIDTYPE void
+			\method_id
+				\TOKEN_MAINFUNC main
+			\TOKEN_LP (
+			\method_args
+			\TOKEN_RP )
+			\block
+				\TOKEN_LCB {
+				\declare_vars
+				\statments
+					\statment
+						\location
+							\TOKEN_ID var
+						\TOKEN_ASSIGNOP =
+						\location
+							\literal
+								\TOKEN_DECIMALCONST 0
+						\TOKEN_SEMICOLON ;
+					\statments
+						\statment
+							\stmt_for
+								\TOKEN_LOOP for
+								\TOKEN_ID i
+								\TOKEN_ASSIGNOP =
+								\location
+									\literal
+										\TOKEN_DECIMALCONST 0
+								\TOKEN_COMMA ,
+								\location
+									\literal
+										\TOKEN_DECIMALCONST 10
+								\block
+									\TOKEN_LCB {
+									\declare_vars
+									\statments
+										\statment
+											\location
+												\TOKEN_ID var
+											\TOKEN_ASSIGNOP +=
+											\location
+												\literal
+													\TOKEN_DECIMALCONST 1
+											\TOKEN_SEMICOLON ;
+										\statments
+									\TOKEN_RCB }
+						\statments
+							\statment
+								\stmt_if
+									\TOKEN_IFCONDITION if
+									\TOKEN_LP (
+									\location
+										\location
+											\location
+												\TOKEN_ID var
+										\TOKEN_EQUALITYOP ==
+										\location
+											\literal
+												\TOKEN_DECIMALCONST 1
+									\TOKEN_PR )
+									\block
+										\TOKEN_LCB {
+										\declare_vars
+										\statments
+											\statment
+												\location
+													\TOKEN_ID a
+													\TOKEN_LB [
+													\location
+														\literal
+															\TOKEN_DECIMALCONST 0
+													\TOKEN_RB ]
+												\TOKEN_ASSIGNOP =
+												\location
+													\literal
+														\TOKEN_DECIMALCONST 1
+												\TOKEN_SEMICOLON ;
+											\statments
+										\TOKEN_RCB }
+									\optional_else
+										\TOKEN_ELSECONDITION else
+										\block
+											\TOKEN_LCB {
+											\declare_vars
+											\statments
+												\statment
+													\location
+														\TOKEN_ID a
+														\TOKEN_LB [
+														\location
+															\literal
+																\TOKEN_DECIMALCONST 7
+														\TOKEN_RB ]
+													\TOKEN_ASSIGNOP =
+													\location
+														\literal
+															\TOKEN_DECIMALCONST 0
+													\TOKEN_SEMICOLON ;
+												\statments
+											\TOKEN_RCB }
+							\statments
+								\statment
+									\method_call
+										\TOKEN_ID is_greater_than_zero
+										\TOKEN_LP (
+										\call_params
+											\location
+												\literal
+													\TOKEN_DECIMALCONST 5
+										\TOKEN_RP )
+									\TOKEN_SEMICOLON ;
+								\statments
+				\TOKEN_RCB }
+		\decl_methods
+\TOKEN_RCB }
+
+Parsing Done Successfully:)
