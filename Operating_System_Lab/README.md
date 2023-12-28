@@ -31,7 +31,7 @@
 - Named Pipe.
 
 ## Lab6 Explanation
-- [Link](./OsLab6/README.md) to more information about this Lab.
+- [Link](./OSLab6/README.md) to more information about this Lab.
 - Inter-process communication(IPC) in Linux using **sockets**
 - TCP socket programming
 - UDP socket programming
